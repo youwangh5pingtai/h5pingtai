@@ -1,0 +1,515 @@
+<extend name="Public/bases" />
+
+<block name="body" >
+
+
+
+	<link rel="stylesheet" href="__CSS__/index.css">
+
+    <!-- <div  class="logo"><img src="__IMG__/ynlogo.png" /></div> -->
+
+	<table border="0" width="100%" bgcolor="#475B75" height="35">
+
+	  <tbody>
+
+		<tr>
+
+			<td width="1%"></td>
+
+			<td width="24%" align="left" style="font-size:12px;color:#ffffff" onclick="window.location=&#39;{:U('Search/index')}&#39;">
+
+				<img src="__IMG__/icon_searchgame.png" width="12" height="12" valign="middle"> 搜索
+
+			</td>
+
+			<td width="50%" align="center" style="font-size:14px;color:#ffffff">游戏中心</td>
+
+			<td width="24%" align="right" style="font-size:12px;color:#ffffff">
+
+				<!-- <span id="spanDownload" onclick="">
+
+					<img src="__IMG__/icon_down.png" width="12" height="12" valign="middle"> 下载微端
+
+				</span> -->
+
+			</td>
+
+			<td width="1%"></td>
+
+		</tr>
+
+	  </tbody>
+
+	</table>
+
+	<div id="fix_nav" class="fix_nav"> 
+
+		<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+
+			<tr height="3" id="nav_line" class="nav_line" style="display:none;">
+
+				<td class="active"></td>
+
+				<td></td>
+
+				<td></td>
+
+				<td></td>
+
+			</tr>
+
+			<tr class="fn2">
+
+				<td onclick="window.location=&#39;{:U('Index/index')}&#39;">
+
+					<span id="menu_1_label" class="active">推荐</span></td>
+
+				<td onclick="window.location=&#39;{:U('Game/index')}&#39;">
+
+					<span id="menu_1_label">新游</span></td>
+
+				<td onclick="window.location=&#39;{:U('Gift/index')}&#39;">
+
+					<span id="menu_1_label">礼包</span></td>
+
+				<td onclick="window.location=&#39;{:U('Search/index')}&#39;">
+
+					<span id="menu_1_label">分类</span></td>
+
+			</tr>
+
+		</table>
+
+	</div>
+
+	<div id="nav_end" style="height:50px;display:none"></div>
+
+	<script>
+
+	function onScroll() {
+
+		if ($(window).scrollTop() > 50) {
+
+			$("#fix_nav").css({position:"fixed",top:0});
+
+			$("#nav_line").show();
+
+			$("#nav_end").show();
+
+		} else {
+
+			$("#fix_nav").css({position:""});
+
+			$("#nav_line").hide();
+
+			$("#nav_end").hide();
+
+		}
+
+	}
+
+	$(function(){
+
+		onScroll();
+
+		$(window).scroll(function() {
+
+			onScroll();
+
+		});
+
+	});
+
+	</script>
+
+    <advert:advlists name="vo" pos_name="'index_top_media'" sort="" limit="1">
+
+      <!--     <div class="newimg"><a href="{$vo.url}"><img src="{$vo.data|get_cover='path'}"></a></div> -->
+
+
+
+	<table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%" align="center">
+
+		<tr>
+
+		 <td><a href="{$vo.url}" target="{$vo.target}"><img src="{$vo.data|get_cover='path'}" alt="暂无广告图片" width="100%" border="0"></a></td>
+
+		</tr>
+
+	</table>
+
+    </advert:advlists>
+
+<div class="wrap">
+
+	<ul class="list">
+
+		<li class="template">
+
+			<div class="open"></div>
+
+			<div class="num"></div>
+
+			<img class="avatar">
+
+			<div class="score">
+
+				<div class="nickname"></div>
+
+				<div class="intro"></div>
+
+			</div>
+
+		</li>
+
+	</ul>
+
+	<table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+
+    <tbody>
+
+      <tr style="display:">
+
+        <td align="center"><table border="0" cellspacing="0" cellpadding="0" width="90%">
+
+            <tbody>
+
+              <tr>
+
+                <td height="10"></td>
+
+              </tr>
+
+              <tr height="30">
+
+                <td style="line-height:150%" align="left"><span style="font-size:16px;color:#000000" id="iNickname">推荐游戏</span></td>
+
+                <td style="font-size:12px;color:#000000" align="right" onclick="window.location=&#39;{:U('Game/index','rs=1')}&#39;">精选<font color="red" id="tjcount">{$recommendcount}款</font>网游&gt;</td>
+
+              </tr>
+
+            </tbody>
+
+          </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td height="1" bgcolor="#f6f6f6"></td>
+
+      </tr>
+
+      <tr>
+
+        <td height="5" bgcolor="#ffffff"></td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="display:" bgcolor="#FFFFFF">
+
+    <tbody>
+
+      <tr>
+
+        <td bgcolor="#ffffff"><div id="toptj">
+
+            <table align="center" border="0" cellspacing="4" cellpadding="4" width="100%">
+
+			<game:recommend name="vo" recommend_status="1" limit="16" order="sort desc" child="true">
+
+				<if condition="$key%4 eq 0" >
+
+				<tr>
+
+				</if>
+
+				<td width="20%">
+
+					<table align="center" border="0" cellspacing="0" cellpadding="0">
+
+						<tr>
+
+						  <td align="center" valign="top">
+
+							<img src="{$vo.icon|get_cover='path'}" class="gameicon" onclick="window.location=&#39;{:U('Game/detail?id='.$vo['id'])}&#39;"></td>
+
+						</tr>
+
+						<tr>
+
+						  <td align="center" height="20">
+
+							<span style="display:block;font-size:12px;color:#000000;width:68px;overflow:hidden;height:14px">
+
+							{$vo.game_name}</span></td>
+
+						</tr>
+
+						<tr>
+
+						  <td height="20" align="center" ><a href="{:U('Game/open_game',array('uid'=>get_uid(),game_id=>$vo['id'],pid=>I('pid'),'promote_id'=>get_user_pid(get_uid())))}" class="play-btn" target="_back">打开</a></td>
+
+						  <!-- onclick="window.location=&#39;{:U('Game/open_game',array('game_id'=>$vo['id'],'uid'=>get_uid()))}&#39;" -->
+
+						</tr>
+
+					</table>
+
+				</td>
+
+				<if condition="($key%4 eq 3) or ($key == (count($recommend)-1))">
+
+				</tr>
+
+				</if>				
+
+			</game:recommend>
+
+            </table>
+
+          </div></td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+
+    <tbody>
+
+      <tr style="display:">
+
+        <td align="center"><table border="0" cellspacing="0" cellpadding="0" width="90%">
+
+            <tbody>
+
+              <tr>
+
+                <td height="10"></td>
+
+              </tr>
+
+              <tr height="30">
+
+                <td style="line-height:150%" align="left"><span style="font-size:16px;color:#000000" id="iNickname">最新更新</span></td>
+
+                <td style="font-size:12px;color:#000000" align="right" onclick="window.location=&#39;{:U('Game/index','rs=3')}&#39;">更新<font color="red" id="weekcount">{$newsgamecount}款</font>游戏&gt;</td>
+
+              </tr>
+
+            </tbody>
+
+          </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td height="1" bgcolor="#f6f6f6"></td>
+
+      </tr>
+
+      <tr>
+
+        <td height="5" bgcolor="#ffffff"></td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="display:" bgcolor="#FFFFFF">
+
+    <tbody>
+
+      <tr>
+
+        <td bgcolor="#ffffff"><div id="toptj2">
+
+            <table align="center" border="0" cellspacing="4" cellpadding="4" width="100%">
+
+			<game:recommend name="vo" recommend_status="3" order="sort desc" limit="16" child="true">
+
+				<if condition="$key%4 eq 0" >
+
+				<tr>
+
+				</if>
+
+				<td width="20%">
+
+					<table align="center" border="0" cellspacing="0" cellpadding="0">
+
+						<tr>
+
+                          <td align="center" valign="top">
+
+							<img src="{$vo.icon|get_cover='path'}" class="gameicon" onclick="window.location=&#39;{:U('Game/detail?id='.$vo['id'])}&#39;"></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td align="center" height="20"><span style="display:block;font-size:12px;color:#000000;width:68px;overflow:hidden;height:14px">{$vo.game_name}</span></td>
+
+                        </tr>
+
+					</table>
+
+				</td>
+
+				<if condition="($key%4 eq 3) or ($key == (count($newsgame)-1))">
+
+				</tr>
+
+				</if>				
+
+			</game:recommend>
+
+            </table>
+
+		</td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+
+    <tbody>
+
+      <tr>
+
+        <td height="10"></td>
+
+      </tr>
+
+      <tr>
+
+
+
+      <advert:advlists name="vo" pos_name="'index_mid_media'" sort="" limit="1">
+
+        <td><a href="{$vo.url}" target="{$vo.target}"><img src="{$vo.data|get_cover='path'}" alt="暂无广告图片" width="100%" border="0"></a></td>
+
+     </advert:advlists>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+
+    <tbody>
+
+      <tr style="display:">
+
+        <td align="center"><table border="0" cellspacing="0" cellpadding="0" width="90%">
+
+            <tbody>
+
+              <tr>
+
+                <td height="10"></td>
+
+              </tr>
+
+              <tr height="30">
+
+                <td style="line-height:150%" align="left"><span style="font-size:16px;color:#000000" id="iNickname">热门游戏</span></td>
+
+                <td style="font-size:12px;color:#000000" align="right" onclick="window.location=&#39;{:U('Game/index','rs=2')}&#39;">全部<font color="red" id="allcount">{$playgamecount}款</font>游戏&gt;</td>
+
+              </tr>
+
+            </tbody>
+
+          </table></td>
+
+      </tr>
+
+      <tr>
+
+        <td height="1" bgcolor="#e5e5e5"></td>
+
+      </tr>
+
+      <tr>
+
+        <td height="5" bgcolor="#ffffff"></td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+	<ul class="list12">
+
+	<game:recommend name="vo" recommend_status="2" limit="16" order='sort desc' child="true">
+
+		<li class="">
+
+			<div class="open"><a href="{:U('Game/detail?id='.$vo['id'])}" class="play-btn">打开</a></div>
+
+			<if condition="$key lt 3" >
+
+			<div class="num num{$key+1}"></div>
+
+			<else />
+
+			<div class="num">{$key+1}</div>
+
+			</if>
+
+			<img class="avatar" src="{$vo.icon|get_cover='path'}">
+
+			<div class="score">
+
+				<div class="nickname">{$vo.game_name} 
+
+					<!-- <font color="#aaaaaa" style="font-size:12px">{$vo.dow_num}</font> --></div>
+
+				<div class="intro">{:msubstr($vo['features'],0,35)}</div>
+
+			</div>
+
+		</li>
+
+	</game:recommend>
+
+  </ul>
+
+  <table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+
+    <tbody>
+
+      <tr>
+
+      <advert:advlists name="vo" pos_name="'index_bottom_media'" sort="" limit="1">
+
+        <td><a href="{$vo.url}" target="{$vo.target}"><img src="{$vo.data|get_cover='path'}" alt="暂无广告图片" width="100%" border="0"></a></td>
+
+     </advert:advlists>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+
+
+</block>

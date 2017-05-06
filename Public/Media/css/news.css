@@ -1,0 +1,33 @@
+.play-btn{display:inline-block;margin-left:3px;padding:5px;width:30px;border:1px solid #fca218;border-radius:2px;color:#fca218;vertical-align:middle;text-align:center;font-size:10px}
+.list{padding:0;list-style:none;zoom:1}
+.list li{position:relative;padding:7px;height:60px;border-bottom:1px solid #e5e5e5;background:#fff}
+.list li.template{display:none}
+.list li.lucky{background:#eee}
+.list li.highlight{background:#a7afff}
+.list li.mypos{color:#df2d5f;text-align:center;text-shadow:0 1px 1px #fff;font-weight:700;line-height:60px;cursor:pointer}
+.list div.lucky{position:absolute;top:0;left:0;width:2pc;height:2pc;background:url(../images/lucky.png) no-repeat;background-size:2pc 2pc}
+.list .avatar{float:left;margin-right:20px;width:56px;height:56px;border:1px solid #fff;border-radius:5px}
+.list .score{overflow:hidden;margin-left:45px;height:60px;min-width:10px;width:65%;}
+.list .nickname{height:20px;color:#211717}
+.list .nickname,.list .scorename{overflow:hidden;text-shadow:0 1px 1px #fff;line-height:18px}
+.list .scorename{height:40px;color:#777;font-size:9pt}
+.list .nickname{overflow:hidden;font-size:1pc}
+.list .nickname a{color:#ff4545;text-decoration:none}
+.list .score .name0{color:#777}
+.list .score .name1{color:#526590}
+.list .score .name2{color:#ec4684}
+.list .bindphone,.list .time{position:absolute;}
+.list .time{top:22px;right:5px;color:#777;}
+.list .bindphone{top:28px;right:10px;color:red}
+.list .recent{color:#ff4545}
+.list .phone{position:absolute;top:25px;left:75px;width:10px;height:18px;background:url(style/images/phone20.png) no-repeat;background-size:10px 18px}
+.list .mobile{color:#e03232}
+.list .bind_a1,.list .mobile{position:absolute;top:10px;right:10px;text-align:right}
+.list .bind_a1{color:#777}
+.list .bind_a2{position:absolute;top:40px;right:10px;color:#e03232;text-align:right}
+.loading{display:none;height:60px;text-align:center;line-height:60px}
+.loading img{vertical-align:middle}
+
+body{background-color: #eeeeee;}
+.fn2 td{width:33%;}
+.fix_nav{position:fixed;left:0;right:0;top:0%;}

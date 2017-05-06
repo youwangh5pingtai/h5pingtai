@@ -1,0 +1,65 @@
+.vote-star{overflow:hidden;margin-right:6px;width:60px;background:url(../images/star.png) repeat-x 0 -9pt;vertical-align:middle}
+.vote-star,.vote-star i{display:inline-block;height:9pt}
+.vote-star i{background:url(../images/star.png) repeat-x 0 0}
+.vote-number{vertical-align:middle;font-size:9pt;font-family:微软雅黑,Verdana,Geneva,sans-serif}
+.tag{padding:1px;border-radius:2px;background:red;color:#fff;font-size:9pt}
+.gameicon{width:54px;height:54px;border-radius:7px}
+.play-btn{display:inline-block;margin-left:3px;padding:5px;width:30px;border:1px solid #1981C0;border-radius:2px;color:#1981C0;vertical-align:middle;text-align:center;font-size:10px}
+body{background-color:#eee;}
+.fix_footer{box-shadow:0 0 11px #191919}
+.fix_footer_menu{background:rgba(0,0,0,.1)}
+.fix_footer_menu,.fix_footer_menu_on{border-right:1px solid rgba(0,0,0,.4);font-family:黑体}
+.fix_footer_menu_on{background:rgba(0,0,0,.3);background:#202020}
+.wrap{min-height:620px}
+img.ad{width:100%;border-radius:5px}
+.my{margin-bottom:10px;padding:5px;border:2px solid #9bb9fa;border-radius:5px;background:#5a1752;color:#fff;line-height:150%}
+.my a{color:#ffcc47;text-decoration:underline}
+.my .hl{color:#0f0}
+.my .pt{color:#ffcc47;font-weight:700}
+.my .op{display:none;color:#ff7171}
+.tip{margin-bottom:10px;padding:5px;border:2px solid #9bb9fa;border-radius:5px;background:#204753;color:#fff;line-height:150%}
+.tip a{color:#ffcc47;text-decoration:underline}
+.tip .hl{color:#0f0}
+.tip .pt{color:#ffcc47;font-weight:700}
+.tip .op{display:none;color:#ff7171}
+.nav{overflow:hidden;height:70px}
+.nav .logo{float:left;width:5pc;height:70px}
+.nav .logo a{display:block;margin:5px 0 0 10px}
+.nav .logo img{width:60px;height:60px;border-radius:5px}
+.nav .tab{color:#fff;text-shadow:0 2px 2px #000;line-height:70px}
+.refresh{margin:-3px 0 5px;color:#ccc}
+.list{padding:0;list-style:none;zoom:1}
+.list li{position:relative;padding:7px;height:60px;border-bottom:1px solid #e5e5e5;background:#fff}
+.list li.template{display:none}
+.list li.lucky{background:#eee}
+.list li.highlight{background:#a7afff}
+.list li.mypos{color:#df2d5f;text-align:center;text-shadow:0 1px 1px #fff;font-weight:700;line-height:60px;cursor:pointer}
+.list div.lucky{position:absolute;top:0;left:0;width:2pc;height:2pc;background:url(../images/lucky.png) no-repeat;background-size:2pc 2pc}
+.list .avatar{float:left;margin-right:20px;width:56px;height:56px;border:1px solid #fff;border-radius:5px}
+.list .score{overflow:hidden;margin-left:45px;height:60px;min-width:10pc}
+.list .nickname{height:20px;color:#211717}
+.list .nickname,.list .scorename{overflow:hidden;text-shadow:0 1px 1px #fff;line-height:18px}
+.list .scorename{height:40px;color:#777;font-size:9pt}
+.list .nickname{overflow:hidden;font-size:1pc}
+.list .nickname a{color:#ff4545;text-decoration:none}
+.list .score .name0{color:#777}
+.list .score .name1{color:#526590}
+.list .score .name2{color:#ec4684}
+.list .time{top:22px;right:30px;color:#777;}
+.list .bindphone,.list .time{position:absolute;text-align:right;font-size:9pt}
+.list .bindphone{top:28px;right:10px;color:red}
+.list .recent{color:#ff4545}
+.list .phone{position:absolute;top:25px;left:75px;width:10px;height:18px;background:url(style/images/phone20.png) no-repeat;background-size:10px 18px}
+.list .mobile{color:#e03232}
+.list .bind_a1,.list .mobile{position:absolute;top:10px;right:10px;text-align:right}
+.list .bind_a1{color:#777}
+.list .bind_a2{position:absolute;top:40px;right:10px;color:#e03232;text-align:right}
+.loading{display:none;height:60px;text-align:center;line-height:60px}
+.loading img{vertical-align:middle}
+body{background-color: #eeeeee;}
+
+.star{width: 70px;background-position: 0 -26px;display:inline-block;}
+.star,.star .star_num{height:13px;background-size: 65px 26px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAiCAYAAAAu0pUjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjcxRTRDQ0RFQzA1MTFFNTg5RkZBREM5OTU5OTFGNEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjcxRTRDQ0VFQzA1MTFFNTg5RkZBREM5OTU5OTFGNEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyNzFFNENDQkVDMDUxMUU1ODlGRkFEQzk5NTk5MUY0QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyNzFFNENDQ0VDMDUxMUU1ODlGRkFEQzk5NTk5MUY0QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuLTf4sAAAPjSURBVHja7JnPTxtHFMe/s8Y/+BUDKkVORHFQSUOLkJAqWYgDKFyqIvVU5VSp9x6qSrnm0iuX5pQcolRt8kfkGKVC4pISAXJroEkIaUEhUDsG//bu67xZjH/tmh9NTjsjr8e23nxm9N7zd9/MGkQE18sskPnnPLW0OenyIMNAi0Yv7oOe3wPexgnnbF5kuDu1nCEr/iNglWEx6DzNowxXp1qJeaCY5PgA6T9Au4/OHGGvMpydmtsm2rhdSXr5klqx+YCjdPrFeJghWFiRThC9jYNSy0DyKSj5O1BK2xahAYiujyXIlCEIAZ2DQPhTiAt8jQLtF4Wy04xjhjCffEf04tcaN8vkJav6nSGdl2VUiqDy4ZGJ/8jWD3Hle9Cbx9CMKsMwJn6CuDhXc4uzGpPZTnnhk4ODahIqZ0G5HSDyBcRH14VmNDBgBIQR+wXiw2kXhc4DZkFecmDhDZB9JTXmb4jBr2F8dtP+u2hGHcPW1ErJ8Nsc6N8nzSD/BSDQq1IeZg4i8iWMz+9wtERT2aEZNU7lltkk8+GYc4Q6oxBtnSCZ9r5rj2VE/cLRTjPqSyoq7LmXFfnXVR2hsvuuQzMa6tTMS3eITHN7EpnZuX/c7TSjwaksug3aIS59xeJdKYJBpRQov+s+mWagrS7ds5v2h+AHMD65AXH5WwYJmepkrd8CPf8ZOPireTLNcNhRVaqFpz+QCI9DRL9RpUXTLKU00bO79sCrNxzFXTMa7/66vZPW8jzVsixaXl7+X173IqOlU9fX17G2toZkMnnuxXiR4erUUqlES0tL6vFAIpE41yK8ynB16srKCgqFgoKkUilsb2+fOcJeZTg6NZvNUjwer/ttY2NDacppF+FlhjjyPEmdwP7+Pvb29lRfLBaVQXt7O8LhMAPg8/nQ1dWF3t5e9PT0qL6jo0OVEppRZYiFhQViAT72shCoLbMY0t3drSBSV+z0NozjfmxsDDs7O9CMKqNtcnIS+XweW1tb9i6ioW5laKXnyDCsXC6ryI2OjmJ4eFhEo1HSjCpDOtcQMzMziEQizk9m5QDTNFXPkx0eHiKTyfBgTExMiKMIaUYtg9+kx8Xs7Cz6+/ubIByBg4ODulRnQCwWq7PTjFjz3d/v94vpaedHCAzidA8Gg0pPpqam+HvTXlgzHEoqTucWZYUCcWRYR1zPbjWj3qmsD65nslJHKpMw0K1pxglODQQCGBoaOi4ZeDDvKnK53KkX4kVGmxMkFAphfHwcIyMjDBJyEK2urqr6LZ1OK7uBgYGWC/Eyo+48dXFxkfr6+tRgLi0cBJoqhwlyEseDXc3Qh9Tvpf0nwADHZIynGqPXJwAAAABJRU5ErkJggg==);background-repeat: no-repeat;}
+.star .star_num{background-position: 0 0;width: 50%;}
+
+.fix_nav{position:fixed;left:0;right:0;top:0%;}

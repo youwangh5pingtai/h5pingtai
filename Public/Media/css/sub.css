@@ -1,0 +1,30 @@
+.round{overflow:hidden;border-radius:50%}
+.list{padding:0;list-style:none;zoom:1;margin:10px 0;}
+.list li{position:relative;padding:7px;height:45px;border-top:1px solid #e5e5e5;background:#fff}
+.list li.template{display:none}
+.list li.lucky{background:#eee}
+.list li.highlight{background:#a7afff}
+.list li.mypos{color:#df2d5f;text-align:center;text-shadow:0 1px 1px #fff;font-weight:700;line-height:60px;cursor:pointer}
+.list div.lucky{position:absolute;top:0;left:0;width:2pc;height:2pc;background:url(http://game.9g.com/rank/img/lucky.png) no-repeat;background-size:2pc 2pc}
+.list .avatar{float:left;margin-right:20px;width:40px;height:40px;border:1px solid #fff;border-radius:5px}
+.list .score{overflow:hidden;margin-left:45px;height:50px;min-width:10pc}
+.list .nickname,.list .scorename{overflow:hidden;height:20px;color:#211717;text-shadow:0 1px 1px #fff;line-height:18px}
+.list .scorename{height:30px;color:#777;font-size:9pt}
+.list .nickname{overflow:hidden;font-size:1pc}
+.list .nickname a{color:#ff4545;text-decoration:none}
+.list .score .name0{color:#777}
+.list .score .name1{color:#526590}
+.list .score .name2{color:#ec4684}
+.list .time{top:10px;right:5px;color:#777}
+.list .bindphone,.list .time{position:absolute;text-align:right;font-size:9pt}
+.list .bindphone{top:28px;right:10px;color:red}
+.list .recent{color:#ff4545}
+.list .phone{position:absolute;top:25px;left:75px;width:10px;height:18px;background:url(http://game.9g.com/rank/img/phone20.png) no-repeat;background-size:10px 18px}
+.list .mobile{color:#e03232}
+.list .bind_a1,.list .mobile{position:absolute;top:10px;right:10px;text-align:right}
+.list .bind_a1{color:#777}
+.list .bind_a2{position:absolute;top:40px;right:10px;color:#e03232;text-align:right}
+.loading{display:none;height:60px;text-align:center;line-height:60px}
+.loading img{vertical-align:middle}
+.play-btn{display:inline-block;margin:6px;padding:3px;padding-right:10px;padding-left:10px;width:30px;border:1px solid #f76f5c;border-radius:2px;color:#f76f5c;text-align:center;text-decoration:none;font-size:10px}
+/* body{background:#eee;} */

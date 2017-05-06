@@ -1,0 +1,112 @@
+.personal{}
+.pmain,.smain,.tmain,.amain,.fmain{background:#fff;}
+.phead,.shead{background:rgba(230,43,19,1) url() center top no-repeat;clear:both;} 
+.phead{position:relative}
+.phead span{display:inline-table;}
+.phead .ph1{padding:10px 10px;width:100px;overflow:hidden;}
+.phead .ph1 img {width:100%;border-radius:100%;}
+.phead .ph2{font-size:18px;color:#fff;width:60%;height:100%;}
+.phead .ph2 div{line-height:35px;height:35px;width:70%;margin-left:10%;border-bottom:1px solid rgba(255,255,255,.1);}
+.phead .ph2 div span{text-indent:-10%;height:100%;display:block;margin:auto;}
+.phead .ph2 i{display:block;width:60%;border-bottom:1.5px solid rgba(255,255,255,.2);font-style:normal;margin:auto;}
+.phead .ph3{width:100px;height:100%;text-align:right;position:absolute;top:0;right:0;}
+.phead .ph3 span{background:rgba(250,43,39,.6);cursor:pointer;border-radius:3px;padding:5px 15px;margin-right:10px;margin-top:15px;color:#fff;font-size:16px;text-indent:2px;letter-spacing:2px;}
+.pmain .pm{width:100%;clear:both;position:relative;line-height:60px;height:60px;font-size:18px;}
+.pay,.feedback,.about{background:#eee;}
+.pmain .pm a{display:block;}
+.pmain .pm span,.tmain .ts .tsm{color:#999; width: 80%;}
+.pmain .pm i{display:block;width:0px;height:0px;float:right;margin-right:10px;margin-top:13px;border:16px solid transparent;border-left-color:#ccc;}
+.pmain .pm img{padding-left:15px;padding-right:5px;}
+@media screen and (min-width:640px) {
+    .pmain .pm{line-height:90px;height:90px;font-size:20px;}
+    .pmain .pm img{width:43px;}
+    .pmain .pm i{border-width:20px;margin-top:25px;}
+}
+/** pay */
+.shead{height:50px;line-height:50px;text-align:center;font-size:20px;text-indent:2px;letter-spacing:2px;color:#fff;}
+.smain{padding-top:5px;}
+.smain .fc{width:80%;margin:0 auto;}
+.smain .sm{line-height:35px;font-size:18px;}
+.smain .sm span{padding:3px 6px;}
+.smain .sm input{font-size:18px;width:40%;line-height:30px;padding:2px 6px;border:1px solid #ccc;
+background:#efefef;border-radius:3px;}
+.smain .sm41 font{color:red;}
+.money {clear:both;}
+.money span{text-align:center;font-size:18px;padding:5px 0;margin:5px 0px;line-height:30px;
+width:44%;display:inline-table;border:1px solid #ccc;background:#efefef;border-radius:3px;}
+.money .m1,.money .m3{margin-right:8%;}
+.money span.curr{color:#fff;background:rgba(230,43,19,1);border:1px solid rgba(230,43,19,1);}
+.payed{background:#eee;color:rgba(230,43,19,1);font-size:18px;text-align:center;
+padding:10px 0;margin:10px 0;text-indent:1px;letter-spacing:1px;}
+.paycate{line-height:50px;text-align:center;}
+.paycate img{width:50px;height:50px;margin:2px 20px;border-radius:1px;display:inline-table}
+.paycate img.curr{border:1px solid rgba(230,43,19,1);}
+.paysubmit{text-align:center;padding-top:30px;}
+.paysubmit .submit{padding:10px 30px;background:rgba(230,43,19,1);
+border-radius:5px;color:#fff;font-size:18px;border:none;text-indent:1px;letter-spacing:1px;}
+
+/**  pop */
+.hidden{display:none;}
+.pop{width:100%;height:100%;position:absolute;top:0;left:0;}
+.pop .popbg{width:100%;height:100%;z-index:1;position:absolute;top:0;left:0;background:rgba(0,0,0,.4);}
+.pop .popcontainer{border-radius:3px;background:rgba(255,255,255,1);width:90%;z-index:2;position:absolute;top:25%;left:0;right:0;margin:auto;}
+.pop .poptitle{border-top-left-radius:3px;border-top-right-radius:3px;line-height:50px;height:50px;text-align:center;font-size:18px;background:#eee;}
+.pop .popmain div{line-height:45px;height:45px;font-size:16px;width:90%;margin:0 auto;}
+.pop .popbottom{border-bottom-left-radius:3px;border-bottom-right-radius:3px;line-height:75px;height:75px;text-align:center;background:#eee;}
+.pop .popbottom input{color:#fff;border-radius:3px;margin:0 10px;width:100px;height:35px;border:none;font-size:16px;font-family:Microsoft YaHei,'微软雅黑','宋体';background:#cbcbcb;}
+.pop .popbottom .popi1{background:rgba(230,43,19,1);}
+.pop .popbottom .popi2{}
+
+/** trace */
+.tmain .ts0{background:#eee;}
+.tmain .ts{width:100%;height:80px;font-size:16px;}
+.tmain .nts{text-align:center;line-height:80px;}
+.tmain .ts a{display:block;width:100%;}
+.tmain .ts i{display:block;width:0px;height:0px;float:right;margin-right:10px;margin-top:20px;border:16px solid transparent;border-left-color:#ccc;}
+.tmain .ts img{width:50px;height:50px;margin:10px 20px;}
+.tmain .ts .tsm{display:inline-table;}
+.tmain .ts .tsm1{color:#67CD0D;font-weight:bold;}
+.tmain .ts .tsm2{display:block;padding-top:5px;}
+.tmain .tra span{padding:0 5px 0 0;}
+
+/** about */
+.amain{padding:20px 0;}
+.amain .alogo{text-align:center;}
+.amain .alogo img{width:150px;height:150px;border-radius:100%;}
+.amain .am{padding:10px 0 0;width:50%;margin:0 auto;}
+@media screen and (max-width:640px) {
+   .amain .am{width:65%;} 
+}
+@media screen and (max-width:500px) {
+    .amain .am{width:75%;} 
+}
+@media screen and (max-width:400px) {
+    .amain .am{width:85%;} 
+}
+@media screen and (max-width:340px) {
+    .amain .am{width:95%;} 
+}
+.amain .amc{line-height:30px;color:#bbb;font-size:16px;padding-left:10%;}
+.amain .amc span{color:#666;}
+/** feedback */
+.fmain{padding:20px 5%;}
+.fmain .fta{color:#999;word-wrap:break-word;width:97%;height:200px;border:none;border-radius:5px;background:#efefef;font-size:16px;padding:6px;}
+.fmain .fmi{padding-top:10px;}
+.fmain .fmi input{word-wrap:break-word;font-size:16px;width:97%;line-height:30px;background:#efefef;padding:3px 2%;border-radius:5px;border:none;}
+.fmain p{line-height:30px;color:#ccc;font-size:16px;}
+.fmain .fms{}
+.fmain .fm .submit{width:100%;outline:none;padding:8px 0;text-align:center;background:rgba(230,43,19,1);border-radius:5px;border:none;color:#fff;font-size:18px;text-indent:1px;letter-spacing:1px;}
+
+.noti,.notbg{width:100%;height:100%;position:absolute;top:0;left:0;}
+.notbg{background:rgba(0,0,0,.4);}
+.notmain{width:70%;border-radius:5px;max-width:400px;min-height:60px;background:#fff;position:absolute;top:25%;left:0;right:0;margin:auto;}
+.info{padding:20px 0;text-align:center;font-size:22px;font-weight:bold;}
+.btn{}
+.btn a{border-radius:3px;width:80px;height:30px;line-height:30px;display:block;margin:10px auto;background:rgba(230,43,19,1);color:#fff;text-align:center;}
+
+
+/** pwd */
+.fmain .fmpwd{text-align:center;padding-top:20px;}
+.fmain .fmpwdp{width:55%;margin:0 auto;line-height:40px;}
+.fmain .fmpwd input{width:55%;line-height:40px;}
+.fmain .fmpwd .submit{width:59%;line-height:40px;}

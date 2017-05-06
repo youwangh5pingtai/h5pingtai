@@ -1,0 +1,10 @@
+/**  pop */
+*{margin:0;padding:0;}
+.popmain div{line-height:45px;height:45px;font-size:16px;width:90%;margin:0 auto;}
+.popbottom{border-bottom-left-radius:3px;border-bottom-right-radius:3px;line-height:75px;height:75px;text-align:center;background:#eee;}
+.popbottom input{color:#fff;border-radius:3px;margin:0 10px;width:100px;height:35px;border:none;font-size:16px;font-family:Microsoft YaHei,'微软雅黑','宋体';background:#cbcbcb;}
+
+
+
+
+

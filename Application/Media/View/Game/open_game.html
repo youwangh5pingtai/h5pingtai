@@ -1,0 +1,81 @@
+<extend name="Public/bases" />
+<block name="body" >
+  <div style="background:#fff;">
+    <iframe id="url_mainframe" frameborder="0" scrolling="yes" name="main" src="{$login_url}" 
+    style="height:100vh; visibility: inherit; width: 100vw;max-width:640px; z-index: 1;overflow: visible;position:absolute;"></iframe>
+  </div>
+<style>body .lay_pop{min-height:300px;}</style>
+<script type="text/javascript">
+  $(function(){
+    $("#test").click(function(){
+      layer.open({
+        id:'iframe', 
+        type:2,
+        title:'订单确认',
+        btn:['立即充值','返回'],
+        skin:'lay_pop',
+        style: ' background-color:#78BA32; color:#fff;',
+        content:['{:U("game_pay")}','no'],
+        yes:function(index,layero) {
+            var lay = $(layero.selector); 
+        },
+        cancel:function(index) {
+            
+        }
+      })
+    })
+  })
+
+
+
+  function jsApiCall($amount,$body)
+  {
+    $.ajax({
+      type:"POST",
+      url:"{:U('GetOpenidn')}",
+      data:{amount:$amount,body:$body},
+      dataType:"json",
+      success:function(res){
+        WeixinJSBridge.invoke(
+          'getBrandWCPayRequest',
+          res,
+          function(res){
+            WeixinJSBridge.log(res.err_msg);
+            alert(res.err_code+res.err_desc+res.err_msg);
+          }
+        );
+      },
+      error:function(){alert('错误');}
+    })
+  }
+
+  function callpay($data)
+  {
+    if (typeof WeixinJSBridge == "undefined"){
+        if( document.addEventListener ){
+
+            document.addEventListener('WeixinJSBridgeReady', jsApiCall , false);
+        }else if (document.attachEvent){
+            document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+            document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+        }
+    }else{
+        jsApiCall();
+    }
+  }
+
+  function pay_js($amount,$body){
+     if (typeof WeixinJSBridge == "undefined"){
+        if( document.addEventListener ){ 
+            document.addEventListener('WeixinJSBridgeReady', jsApiCall , false);
+        }else if (document.attachEvent){
+            document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+            document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+        }
+    }else{
+        jsApiCall($amount,$body);
+    }
+  }
+</script>
+</block>
+

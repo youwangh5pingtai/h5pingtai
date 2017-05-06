@@ -1,0 +1,130 @@
+<extend name="Public/bases" />
+<block name="body" >
+	<link href="__CSS__/news.css" rel="stylesheet" />
+	<div id="fix_nav" class="fix_nav"> 
+		<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr height="3" id="nav_line" class="nav_line">
+				<td class="<if condition='I("category") eq media_activity'>active</if>"></td>
+				<td class="<if condition='I("category") eq media_new'>active</if>"></td>
+				<td class="<if condition='I("category") eq media_gg'>active</if>"></td>
+			</tr>
+			<tr class="fn2">
+				<td onclick="window.location=&#39;{:U('News/index?category=media_activity')}&#39;">
+					<span id="menu_1_label"  class="<if condition='I("category") eq media_activity'>active</if>">游戏活动</span>
+				</td>
+				<td onclick="window.location=&#39;{:U('News/index?category=media_new')}&#39;">
+					<span id="menu_1_label"  class="<if condition='I("category") eq media_new'>active</if>">游戏新闻</span>
+				</td>
+				<td onclick="window.location=&#39;{:U('News/index?category=media_gg')}&#39;">
+					<span id="menu_1_label"  class="<if condition='I("category") eq media_gg'>active</if>">游戏公告</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="nav_end" style="height:50px;"></div>
+	<!-- <table border="0" cellspacing="0" cellpadding="0" width="100%">
+	  <tbody>
+		<tr>
+		  <td><img src="{$ad[0].picurl}" width="100%" border="0" onclick="window.location='{$ad[0].slideurl}'"></td>
+		</tr>
+	  </tbody>
+	</table> -->
+	<div class="wrap">
+		<ul class="list">
+			<li class="template gameinfo">
+				<div class="time"></div>
+				<div class="num"></div>
+				<img class="avatar">
+				<div class="score">
+					<div class="nickname"></div>
+					<div class="scorename"></div>
+				</div>
+			</li>
+			<article:list name="article" category="$category['id']" child="true">
+			<li class="gameinfo">
+			  <div class="time"><a href="{:U('News/detail?id='.$article['id'])}" class="play-btn">阅读</a></div>
+			  <div class="num"></div>
+			  <img class="avatar" src="{$article.cover_id|get_cover='path'}">
+			  <div class="score">
+				<div class="nickname">{$article.title}</div>
+				<div class="scorename">
+					<span class="">发布：{:get_admin_name($article['admin'])}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="">浏览：{$article.view}</span><br/>
+					<span class="">{$article.description}</span>
+				</div>
+			  </div>
+			</li>
+			</article:list>
+		</ul>
+		<script>
+			loadd();
+			function loadd(){
+				var loading ='<img src="__IMG__/loading.gif">正在加载中';
+				var nodata = '已加载完成全部数据';
+				var total='{$total}';
+				var page = '{$page}';
+				$(window).bind("scroll", function(){
+					var more=$(".loading");
+					var $this =$(this),
+						viewH =$(document.body).height(),//可见高度
+						contentH =$(window).height(),//内容高度
+						scrollTop =$(this).scrollTop(),//滚动高度
+						newht = viewH - contentH - scrollTop;
+					if (page > total){
+						more.unbind().html(nodata).css({'background':'#fff'});
+						return;
+					}
+					if(newht <= 0){
+						$(".loading").show();
+						
+						$.ajax({
+							type: 'POST',
+						  async: true,
+					  dataType : 'json',
+							url: '__CONTROLLER__/news',
+						   data: 'p='+page+'&type={$type}',
+					 beforeSend: function(){
+									more.html(loading);
+								},
+						success: function (data) {
+								switch (parseInt(data.status)) {
+									case 1:
+									page = data.page;
+									var d = data.data;
+									var val = '';
+									for(var i=0;i<d.length;i++) {
+										val += '<li class="gameinfo">';
+										val += '<div class="time"><a href="__MODULE__/News/detail/id/'+d[i].id+'" class="play-btn">阅读</a></div>';
+										val += '<div class="num"></div>';
+										val += '<img class="avatar" src="'+d[i].picurl+'">';
+										val += '<div class="score">';
+										val += '<div class="nickname">'+d[i].title+'</div>';
+										val += '<div class="scorename">';
+										val += '<span class="">作者：'+d[i].nickname+'</span>&nbsp;&nbsp;&nbsp;&nbsp;';
+										val += '<span class="">浏览：'+d[i].view+'</span><br/>';
+										val += '<span class="">'+d[i].description+'</span>';
+										val += '</div>';
+										val += '</div>';
+										val += '</li>';															
+									}
+									$('.list').append(val);
+									more.unbind().html('加载更多数据');
+									break;
+								default:
+									more.unbind().html('加载更多数据').hide();
+									break;	
+								}
+								return false;
+							},
+						error: function () {
+								more.unbind().html('加载更多数据').hide();
+							},
+						cache: false
+							
+						});
+					}
+				});
+			}
+		</script>
+	</div>
+</block>

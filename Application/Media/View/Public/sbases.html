@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta property="qc:admins" content="36217642536435363757" /> -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" href="__IMG__/icon_9g.png">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-store, must-revalidate">
+<meta http-equiv="expires" content="0">
+<title>{:C(PC_SET_TITLE)}</title>
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1,minimal-ui">
+<meta name="keywords" content="手机游戏,HTML5游戏,HTML5小游戏,9G,微信游戏">
+<meta name="description" content="9G是新兴的HTML5游戏社区，同时也是国内排名第一的HTML5游戏平台。">
+<meta name="full-screen" content="yes">
+		<link rel="stylesheet" type="text/css" href="__CSS__/base.css">
+
+		<script src="__JS__/jquery-1.8.3.min.js"></script>
+	</head>
+	<body style="max-width: 640px; margin: 0px auto;">
+	<div class="super" style="background:#fff;height:100vh;">
+	<block name="body"></block>	
+	<div style="height:50px;width:100%;"></div>
+	</div>
+	<div id="fix_footer">
+		<table width="100%" height="100%" border="0">
+			<tr>
+				<td onclick="window.location=&#39;{:U('Index/index')}&#39;;" >
+					<if condition='($Think.const.CONTROLLER_NAME eq Index)or($Think.const.CONTROLLER_NAME eq Game) or ($Think.const.CONTROLLER_NAME eq Gift) or ($Think.const.CONTROLLER_NAME eq Search)'>
+					<img style="filter:invert" src="__IMG__/nav_14_on.png"><br>
+					<span id="menu_1_label" class="active">游戏</span>
+					<else />
+					<img style="filter:invert" src="__IMG__/nav_14_off.png"><br>
+					<span id="menu_1_label" >游戏</span>
+					</if>
+				</td>
+				<td onclick="window.location=&#39;{:U('News/index/category/media_activity')}&#39;;">
+					<if condition='$Think.const.CONTROLLER_NAME eq News'>
+					<img src="__IMG__/nav_16_on.png"><br>
+					<span id="menu_3_label" class="active" >活动</span>
+					<else />
+					<img src="__IMG__/nav_16_off.png"><br>
+					<span id="menu_3_label" >活动</span>
+					</if>
+				</td>
+				<td onclick="window.location=&#39;{:U('Subscriber/index')}&#39;;" >
+					<if condition='$Think.const.CONTROLLER_NAME eq Subscriber'>
+					<img src="__IMG__/nav_11_on.png"><br>
+					<span id="menu_3_label" class="active">我</span>
+					<else />
+					<img src="__IMG__/nav_11_off.png"><br>
+					<span id="menu_3_label" >我</span>
+					</if>
+				</td>
+			</tr>
+		</table>
+		<div id="footer_badge_message"></div>
+	</div>
+	<div style="display:none"></div>
+	
+	</body>
+</html>
+
+

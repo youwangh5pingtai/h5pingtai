@@ -1,0 +1,63 @@
+<extend name="Public/sbases" />
+<block name="body">
+<link href="__CSS__/my.css" rel="stylesheet" />
+<div class="personal">
+	<div class="shead">
+		修改密码
+	</div>
+	<div class="fmain">
+		<form action="" id="form" method="post" >
+			<div class="fm fmi fmpwd">                
+                <input type="password" name="oldpassword" id="oldpassword" class="" placeholder="请输入旧密码" />
+            </div>
+			<div class="fm fmi fmpwd"><input type="password" name="password" id="password" class="" placeholder="请输入新密码" /></div>
+			<div class="fm fmi fmpwd"><input type="password" name="repassword" id="repassword" class="" placeholder="请输入确认密码" /></div>
+			<p class="fmpwdp">提示：请谨记您的密码！</p>
+			<div class="fm fms fmpwd">
+				<input type="button" class="submit" value="提交"/>
+			</div>
+		</form>
+	</div>
+</div>
+<script>
+	function notice(info) {
+		$('body').append('<div class="noti"><div class="notbg"></div><div class="notmain"><div class="info">'+info+'</div><div class="btn"><a href="javascript:;">确定</a></div></div></div>');
+		$('.btn').on('click',function() {
+			$('body .noti').remove();
+		});
+	}
+
+	$('.submit').on('click',function() {
+		var old = $.trim($('#oldpassword').val()),
+            pwd = $.trim($('#password').val()),
+                rep = $.trim($('#repassword').val());
+
+		if (!old) {notice('旧密码不能为空');return false;}
+		if (!pwd) {notice('新密码不能为空');return false;}
+		if (!rep) {notice('确认密码不能为空');return false;}
+        if (pwd !== rep) {notice('两次密码不一致');return false;}
+		
+		$.ajax({
+			type:"post",
+			async: false,
+			url:"{:U('pwd')}",
+			data:'oldpassword='+old+'&password='+pwd,
+			dataType:"json",
+			success:function(data){
+                if (parseInt(data.status) == 1) {
+                    notice(data.info);
+                    setTimeout(function() {
+                        window.location.reload();
+                    },5000);
+                } else {
+                    notice(data.info);
+                }
+			},
+			error:function(){
+				notice('服务器故障，请稍候再试');
+				return false;
+			}
+		})
+	});
+</script>
+</block>

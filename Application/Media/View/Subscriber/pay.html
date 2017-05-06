@@ -1,0 +1,260 @@
+<extend name="Public/sbases" />
+<block name="body">
+<link href="__CSS__/my.css" rel="stylesheet" />
+<div class="personal">
+	<div class="shead">
+		平台充值
+	</div>
+	<div class="smain">
+		<form id="form1" action="" method="post" target="_blank"><!-- onsubmit="return false" -->
+		<div class="fc">
+			<div class="sm">
+				<span class="sm1">充值账号：</span><span class="sm11">{$user.nickname}</span>
+			</div>
+			<div class="sm">
+				<span class="sm2">账户余额：</span><span class="sm21">{$user_flatcoin} H币</span>
+			</div>
+			<div class="sm">
+				<span class="sm3">充值金额：</span><span class="sm31">
+				<input type="text" name="recharge" value="10元" id="recharge" /></span>
+			</div>
+			<div class="sm">
+				<span class="sm4">您将获得：</span><span class="sm41"><font>10</font> H币</span>
+				<input type="hidden" name="flatcoin" id="flatcoin" value="10" />
+			</div>
+		
+			<div class="money">
+				<span class="m1">1 元</span>
+				<span class="m2 curr">10 元</span>
+				<span class="m3">50 元</span>
+				<span class="m4">100 元</span>
+			</div>
+		</div>
+			<div class="payed">支付方式</div>
+			<div class="paycate">
+				<img src="__IMG__/zf.png" data-num="alipay" alt="支付宝" title="支付宝" class="curr" />
+				<img src="__IMG__/wx.png" data-num="weixin" alt="微信" title="微信" />
+				<!-- <img src="" data-num="3" alt="手机充值卡" title="手机充值卡" /> -->
+				<input type="hidden" name="paycate" id="pcate" value="alipay" />
+			</div>
+			<div class="paysubmit">
+				<input type="button" id="sub" class="submit" value="确认充值" />
+			</div>
+		</form>
+	</div>
+</div>
+<div class="pop hidden" id="pop">
+	<div class="popbg"></div>
+	<div class="popcontainer">
+	<form action="" name="form2" method="post" >
+		<div class="poptitle">订单确认</div>
+		<div class="popmain">
+			<div><span>订单编号：</span><span id="pmm1">88800116041504668046482</span></div>
+			<div><span>实充金额：</span><span id="pmm2">1元</span></div>
+			<div><span>充值账号：</span><span id="pmm3">{$user.nickname}</span></div>
+			<div><span>物品名称：</span><span id="pmm4">H币</span></div>
+		</div>
+		<div class="popbottom">
+			<input type="button" id="popi1" class="popi1" value="确认充值"/>
+			<input type="button" id="popi2" class="popi2" value="返回修改"/>
+		</div>
+	</form>
+	</div>
+</div>
+<script src="__STATIC__/layer/layer.js"></script>
+
+<script>
+
+	$(function() {
+		$('.money').find('span').on('click',function() {
+			$(this).addClass('curr').siblings('span').removeClass('curr');
+			$money = $(this).text();
+			$h = parseInt($money);
+			$('.sm31').find('input').val($money);
+			$('.sm41').find('font').text($h);
+			$('#flatcoin').val($h);
+		});
+		$('.paycate').find('img').on('click',function() {
+			$(this).addClass('curr').siblings('img').removeClass('curr');
+			$index = $(this).attr('data-num');
+			$('#pcate').val($index);
+		});
+        $('#recharge').on('change',function() {           
+            $h = $.trim($(this).val());
+            $h = parseInt($h);
+            $h = isNaN($h)?0:$h;
+            $(this).val('');
+            $(this).val($h+'元');
+			$('.sm41').find('font').text($h);
+			$('#flatcoin').val($h);
+        });
+		$("#sub").on('click',function(){
+			var recharge = $.trim($('#recharge').val()),pcate = $.trim($('#pcate').val());
+			if (recharge == '') {return false;}
+			if (pcate == ''){return false;}
+			switch($('#pcate').val()){
+				case 'weixin':
+					if (isWeiXin()) {
+						//wx_jsapi_pay();
+						$("#form1").attr('target',"_self");
+						$("#form1").submit();
+					}
+					else if(IsPC()){
+						wx_pay();
+						return false;
+					}else{
+						wx_wap_pay();
+					}
+					break;
+				default:
+					//$("#form1").attr('action',"{:U('Subscriber/alipay')}");
+					$("#form1").submit();
+					break;
+			}
+			//$('#pop').removeClass('hidden');
+			
+			// $('#popi2').on('click',function() {
+			// 	$('#pop').addClass('hidden');
+			// });
+            
+			//$('#pmm2').text(recharge);
+			// 立即充值
+			// $('#popi1').on('click',function() {
+			// 	$("#form1").submit();
+			// });
+			
+		})
+		
+	});
+	function IsPC() {
+	    var userAgentInfo = navigator.userAgent;
+	    var Agents = ["Android", "iPhone",
+	                "SymbianOS", "Windows Phone",
+	                "iPad", "iPod"];
+	    var flag = true;
+	    for (var v = 0; v < Agents.length; v++) {
+	        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+	            flag = false;
+	            break;
+	        }
+	    }
+	    return flag;
+	}
+	function isWeiXin(){
+	    var ua = window.navigator.userAgent.toLowerCase();
+	    if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+	        return true;
+	    }else{
+	        return false;
+	    }
+	}
+
+	function wx_pay(){
+		$.ajax({
+			type:"POST",
+			url:"{:U('wx_pay')}",
+			data:{amount:$('#flatcoin').val()},
+			dataType:"json",
+			success:function(data){
+				layer.open({
+			        id:'iframe', 
+			        type:1,
+			        title:'订单确认',
+			        btn:['充值完成','返回'],
+			        skin:'lay_pop',
+			        style: ' background-color:#78BA32; color:#fff;',
+			        content:data.html,
+			        yes:function(index,layero) {
+			            var lay = $(layero.selector); 
+			            window.location.reload();
+			        },
+			        cancel:function(index) {
+			            
+			        }
+			    });
+			    checkstatus(data.out_trade_no);
+			},
+			error:function(res){
+				alert("服务器故障");
+			}
+		})
+	}
+	function checkstatus(data){
+		$.ajax({
+			type:"POST",
+			url:"{:U('checkstatus')}",
+			data:{out_trade_no:data},
+			dataType:"json",
+			success:function(data1){
+				if(data1.status==1){
+					window.location.href="{:U('Subscriber/index')}";
+				}else{
+					checkstatus(data);
+				}
+			},
+			error:function(res){
+			}
+		})
+	}
+	function wx_wap_pay(){
+		$.ajax({
+			type:"POST",
+			url:"{:U('wx_wap_pay')}",
+			data:{amount:$('#flatcoin').val()},
+			dataType:"json",
+			success:function(data){
+				if(data.status==1){
+					window.location=data.pay_info; 
+				}else{
+					layer.open({
+			        id:'iframe', 
+			        type:1,
+			        title:'订单确认',
+			        btn:['充值完成','返回'],
+			        skin:'lay_pop',
+			        style: ' background-color:#78BA32; color:#fff;',
+			        content:data.html,
+			        yes:function(index,layero) {
+			            var lay = $(layero.selector); 
+			            window.location.reload();
+			        },
+			        cancel:function(index) {
+			            
+			        }
+			    })
+				}
+			},
+			error:function(res){
+				alert("服务器故障");
+			}
+		})
+	}
+	function wx_jsapi_pay(){
+		 $.ajax({
+	      type:"POST",
+	      // async:false,
+	      url:"{:U('wx_jsapi_pay')}",
+	      data:{amount:$("#flatcoin").val()},
+	      dataType:"json",
+	      success:function(res){
+
+	        WeixinJSBridge.invoke(
+	          'getBrandWCPayRequest',
+	          res,
+	          function(res){
+	            WeixinJSBridge.log(res.err_msg);
+	            alert(res.err_code+res.err_desc+res.err_msg);
+	          }
+	        );
+	      },
+	      error:function(){alert('错误');}
+	    })
+		return;
+	}
+
+</script>
+<script type="text/javascript">
+
+
+</script>
+</block>

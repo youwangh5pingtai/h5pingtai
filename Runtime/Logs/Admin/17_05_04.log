@@ -1,0 +1,1221 @@
+[ 2017-05-04T21:38:34+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-04T21:38:34+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `sys_config` [ RunTime:0.0030s ]
+SQL: SELECT `type`,`name`,`value` FROM `sys_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-04T21:41:42+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-04T21:41:42+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-04T21:42:00+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: lite D:\phpfind\WWW\wm\wm\h5\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sys_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_member` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `sys_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sys_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_member` [ RunTime:0.0040s ]
+SQL: SELECT `nickname` FROM `sys_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_action_log` [ RunTime:0.0040s ]
+SQL: INSERT INTO `sys_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','2130706433','member','1','1493905320','Administrator在2017-05-04 21:42登录了后台') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 1 D:\phpfind\WWW\wm\wm\h5\Application\Common\Common\function.php 第 780 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\phpfind\WWW\wm\wm\h5\Application\Common\Common\function.php 第 780 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `sys_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1493818920 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `sys_member` SET `login`=`login`+1,`last_login_time`='1493905320',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-04T21:42:04+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `sys_addons` [ RunTime:0.0060s ]
+SQL: SELECT `config` FROM `sys_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `tab_spend` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `tab_deposit` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `tab_promote` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_user` WHERE ( register_time between 1493740800 and 1493827200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_user` WHERE ( register_time between 1493827200 and 1493913599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_user` WHERE ( login_time between 1493827200 and 1493913599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` WHERE ( create_time between 1493827200 and 1493913599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` WHERE ( create_time between 1493568000 and 1496246399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_spend` WHERE ( pay_status=1 and pay_way <> 0 )  [ RunTime:0.0010s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_deposit` WHERE ( pay_status=1 )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_spend` WHERE ( pay_status=1 and pay_time  between 1493740800 and 1493827200   and pay_way <> 0 )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_deposit` WHERE ( pay_status=1 and create_time  between 1493740800 and 1493827200  )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_spend` WHERE ( pay_status=1 and pay_time  between 1493827200 and 1493913599   and pay_way <> 0 )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_deposit` WHERE ( pay_status=1 and create_time  between 1493827200 and 1493913599  )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_spend` WHERE ( pay_status=1 and promote_id > 0  and pay_way <> 0 )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_deposit` WHERE ( pay_status=1  and promote_id > 0 )  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_promote` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_promote` WHERE ( create_time between 1493827200 and 1493913599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_promote` WHERE ( create_time between 1493568000 and 1496246399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_document` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sys_category` [ RunTime:0.0040s ]
+SQL: SELECT `id` FROM `sys_category` WHERE ( status=1 and display=1 and pid=( SELECT `id` FROM `sys_category` WHERE ( status=1 and display=1 and name='blog' )  ) )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpfind\WWW\wm\wm\h5\Addons\SiteStat\SiteStatAddon.class.php 第 96 行.
+NOTIC: [8] Undefined variable: d D:\phpfind\WWW\wm\wm\h5\Addons\SiteStat\SiteStatAddon.class.php 第 99 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\phpfind\WWW\wm\wm\h5\Addons\SiteStat\SiteStatAddon.class.php 第 99 行.
+SQL: SELECT `id` FROM `sys_category` WHERE ( status=1 and display=1 and pid=( SELECT `id` FROM `sys_category` WHERE ( status=1 and display=1 and name='media' )  ) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_document` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sys_document as d WHERE ( d.status=1 and d.display=1 and d.category_id in ('') ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_document` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sys_document as d WHERE ( d.status=1 and d.display=1 and d.category_id in ('42','43','44','45','46','47','49') ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pay_amount`,pay_time as time FROM `tab_spend` WHERE ( pay_status=1 and pay_way <> 0 and pay_time  between 1493308800 and 1493903101  )  [ RunTime:0.0010s ]
+SQL: SELECT `pay_amount`,create_time as time FROM `tab_deposit` WHERE ( pay_status=1 and create_time  between 1493308800 and 1493903101  )  [ RunTime:0.0000s ]
+SQL: SELECT `account`,register_time as time FROM `tab_user` WHERE ( lock_status=1 and register_time  between 1493308800 and 1493903101  )  [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 3 for Addons\SiteStat\SiteStatAddon::idata(), called in D:\phpfind\WWW\wm\wm\h5\Addons\SiteStat\SiteStatAddon.class.php on line 86 and defined D:\phpfind\WWW\wm\wm\h5\Addons\SiteStat\SiteStatAddon.class.php 第 102 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.122007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.117006s ]
+SQL: SELECT `config` FROM `sys_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-2.895166s ]
+SQL: select version() as v; [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-2.767159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-2.776159s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:2.776159s ]
+SQL: SELECT `config` FROM `sys_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-2.907167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-2.779159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-2.783160s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.007001s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:2.900166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-2.779159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-2.784160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-04T21:42:05+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `sys_addons` [ RunTime:0.0030s ]
+SQL: SELECT `config` FROM `sys_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `tab_spend` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `tab_deposit` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `tab_promote` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_user` WHERE ( register_time between 1493740800 and 1493827200  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_user` WHERE ( register_time between 1493827200 and 1493913599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_user` WHERE ( login_time between 1493827200 and 1493913599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` WHERE ( create_time between 1493827200 and 1493913599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` WHERE ( create_time between 1493568000 and 1496246399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_spend` WHERE ( pay_status=1 and pay_way <> 0 )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_deposit` WHERE ( pay_status=1 )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_spend` WHERE ( pay_status=1 and pay_time  between 1493740800 and 1493827200   and pay_way <> 0 )  [ RunTime:0.0010s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_deposit` WHERE ( pay_status=1 and create_time  between 1493740800 and 1493827200  )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_spend` WHERE ( pay_status=1 and pay_time  between 1493827200 and 1493913599   and pay_way <> 0 )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_deposit` WHERE ( pay_status=1 and create_time  between 1493827200 and 1493913599  )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_spend` WHERE ( pay_status=1 and promote_id > 0  and pay_way <> 0 )  [ RunTime:0.0000s ]
+SQL: SELECT sum(pay_amount) as amount FROM `tab_deposit` WHERE ( pay_status=1  and promote_id > 0 )  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_promote` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_promote` WHERE ( create_time between 1493827200 and 1493913599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_promote` WHERE ( create_time between 1493568000 and 1496246399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_document` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sys_category` [ RunTime:0.0040s ]
+SQL: SELECT `id` FROM `sys_category` WHERE ( status=1 and display=1 and pid=( SELECT `id` FROM `sys_category` WHERE ( status=1 and display=1 and name='blog' )  ) )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpfind\WWW\wm\wm\h5\Addons\SiteStat\SiteStatAddon.class.php 第 96 行.
+NOTIC: [8] Undefined variable: d D:\phpfind\WWW\wm\wm\h5\Addons\SiteStat\SiteStatAddon.class.php 第 99 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\phpfind\WWW\wm\wm\h5\Addons\SiteStat\SiteStatAddon.class.php 第 99 行.
+SQL: SELECT `id` FROM `sys_category` WHERE ( status=1 and display=1 and pid=( SELECT `id` FROM `sys_category` WHERE ( status=1 and display=1 and name='media' )  ) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_document` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sys_document as d WHERE ( d.status=1 and d.display=1 and d.category_id in ('') ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_document` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sys_document as d WHERE ( d.status=1 and d.display=1 and d.category_id in ('42','43','44','45','46','47','49') ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pay_amount`,pay_time as time FROM `tab_spend` WHERE ( pay_status=1 and pay_way <> 0 and pay_time  between 1493308800 and 1493903104  )  [ RunTime:0.0010s ]
+SQL: SELECT `pay_amount`,create_time as time FROM `tab_deposit` WHERE ( pay_status=1 and create_time  between 1493308800 and 1493903104  )  [ RunTime:0.0000s ]
+SQL: SELECT `account`,register_time as time FROM `tab_user` WHERE ( lock_status=1 and register_time  between 1493308800 and 1493903104  )  [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 3 for Addons\SiteStat\SiteStatAddon::idata(), called in D:\phpfind\WWW\wm\wm\h5\Addons\SiteStat\SiteStatAddon.class.php on line 86 and defined D:\phpfind\WWW\wm\wm\h5\Addons\SiteStat\SiteStatAddon.class.php 第 102 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.056003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.052003s ]
+SQL: SELECT `config` FROM `sys_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.359020s ]
+SQL: select version() as v; [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.299017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.306018s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.306018s ]
+SQL: SELECT `config` FROM `sys_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.370021s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.311018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.315018s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.009000s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.367021s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.311018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.315018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-04T21:42:10+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/lists%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: p D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: extend D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 29 行.
+SQL: SHOW COLUMNS FROM `sys_model` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sys_model` WHERE `name` = 'game' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`sort`,`game_name`,`game_type_name`,`game_appid`,`game_status`,`recommend_status`,`mix_status`,`game_api` FROM `tab_game` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `sys_model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_attribute` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `sys_attribute` WHERE `model_id` = 4  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Search/game_type.html): failed to open stream: No such file or directory D:\phpfind\WWW\wm\wm\h5\ThinkPHP\Library\Think\Template.class.php 第 700 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tab_game` WHERE `game_status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game_type` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tab_game_type` WHERE ( status=1 )  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-04T21:42:14+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/add/model/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/add%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 125 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: meta_title D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\d547876950465376e4639887bff20c94.php 第 5 行.
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game_type` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tab_game_type` WHERE ( status=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_opentype` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `tab_opentype` WHERE ( status=1 )  [ RunTime:0.0000s ]
+INFO: [ UploadImages ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.034001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Addons\UploadImages\UploadImagesAddon [ RunTime:0.004001s ]
+INFO: [ UploadImages ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\d547876950465376e4639887bff20c94.php 第 511 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\d547876950465376e4639887bff20c94.php 第 516 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\d547876950465376e4639887bff20c94.php 第 546 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\d547876950465376e4639887bff20c94.php 第 551 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.011000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-04T21:43:05+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/add%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 125 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0040s ]
+SQL: INSERT INTO `tab_game` (`game_name`,`game_appid`,`game_address`,`game_type_name`,`category`,`discount`,`game_api`,`ratio`,`money`,`sort`,`version`,`icon`,`cover`,`screenshot`,`features`,`game_score`,`recommend_level`,`game_size`,`game_status`,`recommend_status`,`dow_status`,`language`,`developers`,`game_coin_name`,`game_coin_ration`,`introduction`,`create_time`) VALUES ('一骑当千','27DF61443B4D49AD0','','','0','0','','50','0','1','','0','0','','','0','0','','1','1','1','','','','','','1493905385') [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `tab_game_set` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `sys_model` [ RunTime:0.0040s ]
+SQL: SELECT `extend` FROM `sys_model` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `sys_attribute` WHERE `model_id` = 5  [ RunTime:0.0000s ]
+SQL: INSERT INTO `tab_game_set` (`qq_group`,`login_notify_url`,`pay_notify_url`,`game_role_url`,`game_gift_url`,`game_key`,`game_pay_appid`,`access_key`,`agent_id`,`game_id`) VALUES ('','','','','','','','','','1') [ RunTime:0.0580s ]
+NOTIC: [8] Undefined index: id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 97 行.
+
+[ 2017-05-04T21:43:07+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/lists%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: p D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: extend D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 29 行.
+SQL: SHOW COLUMNS FROM `sys_model` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sys_model` WHERE `name` = 'game' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`sort`,`game_name`,`game_type_name`,`game_appid`,`game_status`,`recommend_status`,`mix_status`,`game_api` FROM `tab_game` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `sys_model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_attribute` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `sys_attribute` WHERE `model_id` = 4  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Search/game_type.html): failed to open stream: No such file or directory D:\phpfind\WWW\wm\wm\h5\ThinkPHP\Library\Think\Template.class.php 第 700 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tab_game` WHERE `game_status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game_type` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tab_game_type` WHERE ( status=1 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined variable: status D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\extend.php 第 261 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index: category_id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-04T21:43:15+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/add/model/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/add%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 125 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\d547876950465376e4639887bff20c94.php 第 5 行.
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game_type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tab_game_type` WHERE ( status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tab_opentype` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tab_opentype` WHERE ( status=1 )  [ RunTime:0.0000s ]
+INFO: [ UploadImages ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.017001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Addons\UploadImages\UploadImagesAddon [ RunTime:0.004000s ]
+INFO: [ UploadImages ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\d547876950465376e4639887bff20c94.php 第 511 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\d547876950465376e4639887bff20c94.php 第 516 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\d547876950465376e4639887bff20c94.php 第 546 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\d547876950465376e4639887bff20c94.php 第 551 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-04T21:43:42+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/add%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 125 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0040s ]
+
+[ 2017-05-04T21:43:48+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/add%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 125 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0040s ]
+SQL: INSERT INTO `tab_game` (`game_name`,`game_appid`,`game_address`,`game_type_name`,`category`,`discount`,`game_api`,`ratio`,`money`,`sort`,`version`,`icon`,`cover`,`screenshot`,`features`,`game_score`,`recommend_level`,`game_size`,`game_status`,`recommend_status`,`dow_status`,`language`,`developers`,`game_coin_name`,`game_coin_ration`,`introduction`,`create_time`) VALUES ('刃无双','583007A2E06A4820A','','','0','0','','55','0','5','','0','0','','','0','0','','1','1','1','','','','','','1493905428') [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `tab_game_set` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sys_model` [ RunTime:0.0030s ]
+SQL: SELECT `extend` FROM `sys_model` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `sys_attribute` WHERE `model_id` = 5  [ RunTime:0.0010s ]
+SQL: INSERT INTO `tab_game_set` (`qq_group`,`login_notify_url`,`pay_notify_url`,`game_role_url`,`game_gift_url`,`game_key`,`game_pay_appid`,`access_key`,`agent_id`,`game_id`) VALUES ('','','','','','','','','','2') [ RunTime:0.0290s ]
+NOTIC: [8] Undefined index: id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 97 行.
+
+[ 2017-05-04T21:43:50+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/lists%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: p D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: extend D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 29 行.
+SQL: SHOW COLUMNS FROM `sys_model` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sys_model` WHERE `name` = 'game' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`sort`,`game_name`,`game_type_name`,`game_appid`,`game_status`,`recommend_status`,`mix_status`,`game_api` FROM `tab_game` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `sys_model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `sys_attribute` WHERE `model_id` = 4  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Search/game_type.html): failed to open stream: No such file or directory D:\phpfind\WWW\wm\wm\h5\ThinkPHP\Library\Think\Template.class.php 第 700 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tab_game` WHERE `game_status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game_type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tab_game_type` WHERE ( status=1 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined variable: status D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\extend.php 第 261 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index: category_id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 58 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined variable: status D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\extend.php 第 261 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index: category_id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-04T21:43:57+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/edit/id/2/model/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/edit%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 125 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`game_name`,`sort`,`short`,`game_type_id`,`game_type_name`,`game_score`,`features`,`recommend_level`,`version`,`game_size`,`icon`,`cover`,`screenshot`,`introduction`,`game_api`,`and_dow_address`,`ios_dow_address`,`game_address`,`dow_num`,`game_status`,`pay_status`,`dow_status`,`mix_status`,`developers`,`create_time`,`discount`,`language`,`game_appid`,`game_coin_name`,`game_coin_ration`,`category`,`ratio`,`money`,`recommend_status` FROM `tab_game` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game_set` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`game_id`,`login_notify_url`,`pay_notify_url`,`game_role_url`,`game_gift_url`,`game_key`,`access_key`,`agent_id`,`game_pay_appid`,`qq_group` FROM `tab_game_set` WHERE `game_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tab_game_type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tab_game_type` WHERE ( status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tab_opentype` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tab_opentype` WHERE ( status=1 )  [ RunTime:0.0000s ]
+INFO: [ UploadImages ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Addons\UploadImages\UploadImagesAddon [ RunTime:0.004000s ]
+INFO: [ UploadImages ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\2aced5d0e473cbb1133380841fe23993.php 第 503 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\2aced5d0e473cbb1133380841fe23993.php 第 508 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\2aced5d0e473cbb1133380841fe23993.php 第 538 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\2aced5d0e473cbb1133380841fe23993.php 第 543 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-04T21:44:54+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/File/uploadPicture/session_id/gunmlq542jckmi9e2rpfi7ffe1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%File/uploadPicture%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`path`,`url`,`md5`,`sha1`,`status`,`create_time` FROM `sys_picture` WHERE `md5` = 'a02f3fc1a14ad217d4d12554b09aa2c4' AND `sha1` = '2fb2c83456d8643e07bcf53fb4c66d1acbad4090' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `sys_picture` (`md5`,`sha1`,`path`,`status`,`create_time`) VALUES ('a02f3fc1a14ad217d4d12554b09aa2c4','2fb2c83456d8643e07bcf53fb4c66d1acbad4090','/Uploads/Picture/2017-05-04/590b3056ec0e6.jpg','1','1493905494') [ RunTime:0.0000s ]
+
+[ 2017-05-04T21:44:57+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/File/uploadPicture/session_id/gunmlq542jckmi9e2rpfi7ffe1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%File/uploadPicture%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`path`,`url`,`md5`,`sha1`,`status`,`create_time` FROM `sys_picture` WHERE `md5` = 'c8d32390e500b9875eaaddf6e5df7c7b' AND `sha1` = '263357724c79905253f8fd1dc1db8748175d5764' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `sys_picture` (`md5`,`sha1`,`path`,`status`,`create_time`) VALUES ('c8d32390e500b9875eaaddf6e5df7c7b','263357724c79905253f8fd1dc1db8748175d5764','/Uploads/Picture/2017-05-04/590b30594c6bc.jpg','1','1493905497') [ RunTime:0.0000s ]
+
+[ 2017-05-04T21:44:59+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/edit%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 125 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0030s ]
+SQL: UPDATE `tab_game` SET `game_name`='刃无双',`game_appid`='583007A2E06A4820A',`game_address`='',`game_type_name`='',`category`='0',`discount`='0',`game_api`='',`ratio`='55',`money`='0',`sort`='5',`version`='',`icon`='1',`cover`='0',`screenshot`='2',`features`='',`game_score`='0',`recommend_level`='0',`game_size`='',`game_status`='1',`recommend_status`='1',`dow_status`='1',`language`='',`developers`='',`game_coin_name`='',`game_coin_ration`='',`introduction`='' WHERE `id` = 2 [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `tab_game_set` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_model` [ RunTime:0.0040s ]
+SQL: SELECT `extend` FROM `sys_model` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `sys_attribute` WHERE `model_id` = 5  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Model\GameModel.class.php 第 122 行.
+SQL: UPDATE `tab_game_set` SET `qq_group`='',`login_notify_url`='',`pay_notify_url`='',`game_role_url`='',`game_gift_url`='',`game_key`='',`game_pay_appid`='',`access_key`='',`agent_id`='',`id`='2',`game_id`='2' WHERE `game_id` = 2 [ RunTime:0.0010s ]
+
+[ 2017-05-04T21:45:01+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/lists%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: p D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: extend D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 29 行.
+SQL: SHOW COLUMNS FROM `sys_model` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sys_model` WHERE `name` = 'game' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`sort`,`game_name`,`game_type_name`,`game_appid`,`game_status`,`recommend_status`,`mix_status`,`game_api` FROM `tab_game` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `sys_model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `sys_attribute` WHERE `model_id` = 4  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Search/game_type.html): failed to open stream: No such file or directory D:\phpfind\WWW\wm\wm\h5\ThinkPHP\Library\Think\Template.class.php 第 700 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tab_game` WHERE `game_status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tab_game_type` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `tab_game_type` WHERE ( status=1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined variable: status D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\extend.php 第 261 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index: category_id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 58 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined variable: status D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\extend.php 第 261 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index: category_id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-04T21:45:06+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/edit/id/1/model/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/edit%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 125 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`game_name`,`sort`,`short`,`game_type_id`,`game_type_name`,`game_score`,`features`,`recommend_level`,`version`,`game_size`,`icon`,`cover`,`screenshot`,`introduction`,`game_api`,`and_dow_address`,`ios_dow_address`,`game_address`,`dow_num`,`game_status`,`pay_status`,`dow_status`,`mix_status`,`developers`,`create_time`,`discount`,`language`,`game_appid`,`game_coin_name`,`game_coin_ration`,`category`,`ratio`,`money`,`recommend_status` FROM `tab_game` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game_set` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`game_id`,`login_notify_url`,`pay_notify_url`,`game_role_url`,`game_gift_url`,`game_key`,`access_key`,`agent_id`,`game_pay_appid`,`qq_group` FROM `tab_game_set` WHERE `game_id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game_type` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tab_game_type` WHERE ( status=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_opentype` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tab_opentype` WHERE ( status=1 )  [ RunTime:0.0000s ]
+INFO: [ UploadImages ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.016000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Addons\UploadImages\UploadImagesAddon [ RunTime:0.004000s ]
+INFO: [ UploadImages ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\2aced5d0e473cbb1133380841fe23993.php 第 503 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\2aced5d0e473cbb1133380841fe23993.php 第 508 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\2aced5d0e473cbb1133380841fe23993.php 第 538 行.
+NOTIC: [8] Undefined variable: field D:\phpfind\WWW\wm\wm\h5\Runtime\Cache\Admin\2aced5d0e473cbb1133380841fe23993.php 第 543 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-04T21:45:10+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/File/uploadPicture/session_id/gunmlq542jckmi9e2rpfi7ffe1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%File/uploadPicture%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`path`,`url`,`md5`,`sha1`,`status`,`create_time` FROM `sys_picture` WHERE `md5` = '8dfffce9f5fd7cfce258e8853bf10e98' AND `sha1` = 'ac4a425167403c4c5118d09bbc79fe417e9a8478' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `sys_picture` (`md5`,`sha1`,`path`,`status`,`create_time`) VALUES ('8dfffce9f5fd7cfce258e8853bf10e98','ac4a425167403c4c5118d09bbc79fe417e9a8478','/Uploads/Picture/2017-05-04/590b30660ba85.jpg','1','1493905509') [ RunTime:0.0000s ]
+
+[ 2017-05-04T21:45:12+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/File/uploadPicture/session_id/gunmlq542jckmi9e2rpfi7ffe1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%File/uploadPicture%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`path`,`url`,`md5`,`sha1`,`status`,`create_time` FROM `sys_picture` WHERE `md5` = 'c8d32390e500b9875eaaddf6e5df7c7b' AND `sha1` = '263357724c79905253f8fd1dc1db8748175d5764' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-04T21:45:16+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0040s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/edit%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 125 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0040s ]
+SQL: UPDATE `tab_game` SET `game_name`='一骑当千',`game_appid`='27DF61443B4D49AD0',`game_address`='',`game_type_name`='',`category`='0',`discount`='0',`game_api`='',`ratio`='50',`money`='0',`sort`='1',`version`='',`icon`='3',`cover`='0',`screenshot`='2',`features`='',`game_score`='0',`recommend_level`='0',`game_size`='',`game_status`='1',`recommend_status`='1',`dow_status`='1',`language`='',`developers`='',`game_coin_name`='',`game_coin_ration`='',`introduction`='' WHERE `id` = 1 [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `tab_game_set` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `sys_model` [ RunTime:0.0040s ]
+SQL: SELECT `extend` FROM `sys_model` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sys_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `sys_attribute` WHERE `model_id` = 5  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Model\GameModel.class.php 第 122 行.
+SQL: UPDATE `tab_game_set` SET `qq_group`='',`login_notify_url`='',`pay_notify_url`='',`game_role_url`='',`game_gift_url`='',`game_key`='',`game_pay_appid`='',`access_key`='',`agent_id`='',`id`='1',`game_id`='1' WHERE `game_id` = 1 [ RunTime:0.0010s ]
+
+[ 2017-05-04T21:45:18+08:00 ] 127.0.0.1 /wm/wm/h5/admin.php?s=/Game/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\ThinkController::lists() should be compatible with Admin\Controller\AdminController::lists($model, $where = Array, $order = '', $field = true) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\ThinkController.class.php 第 16 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::lists() should be compatible with Admin\Controller\ThinkController::lists($model = NULL, $p = 0, $extend_map = Array) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::edit() should be compatible with Admin\Controller\ThinkController::edit($model = NULL, $id = 0) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+NOTIC: [2048] Declaration of Admin\Controller\GameController::add() should be compatible with Admin\Controller\ThinkController::add($model = NULL) D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `sys_auth_group` [ RunTime:0.0030s ]
+SQL: SELECT * FROM sys_auth_group as ag right JOIN sys_auth_group_access as aga on(ag.id=aga.group_id and aga.uid=1)  WHERE ( ag.status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `sys_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `sys_menu` WHERE ( pid !=0 AND url like '%Game/lists%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sys_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `sys_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `sys_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '游戏管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `sys_menu` WHERE `group` = '礼包管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: p D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 29 行.
+NOTIC: [8] Undefined variable: extend D:\phpfind\WWW\wm\wm\h5\Application\Admin\Controller\GameController.class.php 第 29 行.
+SQL: SHOW COLUMNS FROM `sys_model` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `sys_model` WHERE `name` = 'game' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`sort`,`game_name`,`game_type_name`,`game_appid`,`game_status`,`recommend_status`,`mix_status`,`game_api` FROM `tab_game` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tab_game` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `sys_model` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sys_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `sys_attribute` WHERE `model_id` = 4  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Search/game_type.html): failed to open stream: No such file or directory D:\phpfind\WWW\wm\wm\h5\ThinkPHP\Library\Think\Template.class.php 第 700 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sys_picture` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sys_picture` WHERE `status` = 1 AND `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tab_game` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tab_game` WHERE `game_status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tab_game_type` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `tab_game_type` WHERE ( status=1 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined variable: status D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\extend.php 第 261 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index: category_id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 58 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined variable: status D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\extend.php 第 261 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined offset: 2 D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index:  D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 16 行.
+NOTIC: [8] Undefined index: category_id D:\phpfind\WWW\wm\wm\h5\Application\Admin\Common\function.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

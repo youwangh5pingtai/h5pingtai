@@ -1,0 +1,39 @@
+<extend name="Public/bases" />
+<block name="body" >
+<link href="__CSS__/newsdetail.css" rel="stylesheet" />
+<div class="fix_nav" id="fix_nav">
+  <table border="0" width="100%" bgcolor="#e62b13" height="35">
+	  <tr>
+		<td width="25%" align="left"><img src="__IMG__/icon_return.png" width="20" onclick="window.location=&#39;{:U('News/index/category/media_activity')}&#39;" valign="middle"></td>
+		<td width="50%" align="center" style="font-size:14px;color:#ffffff" id="gametitle">{$info.title}</td>
+		<td width="24%" align="right" style="font-size:12px;color:#ffffff" onclick=""></td>
+		<td width="1%"></td>
+	  </tr>
+  </table>
+</div>
+<div style="height:35px" id="fix_nav_over"></div>
+<div class="newscontent">
+<div class="newstitle"></div>
+<div class="newsinfo" >
+	<span>时间：{$info.update_time|date='Y-m-d',###}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+	<span>作者：{:get_admin_name($info['admin'])}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+	<span>浏览：{$info.view}</span></div>
+<div class="nc">
+	{$info.content}
+</div>
+<!-- <div class="newspage">
+	<div class="npprev">上一篇：
+	<empty name="prev">没有了
+	<else />
+		<a href="{:U('News/detail?id='.$prev['id'])}" title="{$prev['title']}">
+	 {$prev['title']}</a>
+	 </empty>
+	</div>
+	<div class="npnext">下一篇：
+	<empty name="next">没有了<else />
+		<a href="{:U('News/detail?id='.$next['id'])}" title="{$next['title']}">
+	{$next['title']}</a>
+	</empty></div>
+</div> -->
+</div>
+</block>

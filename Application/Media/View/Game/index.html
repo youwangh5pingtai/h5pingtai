@@ -1,0 +1,185 @@
+<extend name="Public/bases" />
+<block name="body" >
+	<link href="__CSS__/game.css" rel="stylesheet" />
+	<div id="fix_nav" class="fix_nav"> 
+		<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr height="3" id="nav_line" class="nav_line">
+				<td></td>
+				<td class="active"></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="fn2">
+				<td onclick="window.location=&#39;{:U('Index/index')}&#39;">
+					<span id="menu_1_label">推荐</span></td>
+				<td onclick="window.location=&#39;{:U('Game/index')}&#39;">
+					<span id="menu_1_label" class="active">新游</span></td>
+				<td onclick="window.location=&#39;{:U('Gift/index')}&#39;">
+					<span id="menu_1_label">礼包</span></td>
+				<td onclick="window.location=&#39;{:U('Search/index')}&#39;">
+					<span id="menu_1_label">分类</span></td>
+			</tr>
+		</table>
+	</div>
+	<div id="nav_end" style="height:50px;"></div>
+	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+	  <tbody>
+		<tr>
+      <advert:advlists name="vo" pos_name="'game_top_media'" sort="" limit="1">
+        <td><img src="{$vo.data|get_cover='path'}" alt="暂无广告图片" width="100%" border="0" onclick="window.location=&#39;{$vo.url}&#39;"></td>
+     </advert:advlists>
+		</tr>
+	  </tbody>
+	</table>
+	<div class="wrap">
+		<ul class="list">
+			<li class="template gameinfo">
+				<div class="time"></div>
+				<div class="num"></div>
+				<img class="avatar">
+				<div class="score">
+					<div class="nickname"></div>
+					<div class="scorename"></div>
+				</div>
+			</li>
+
+			<if condition="($rs eq 1)">
+				<game:recommend name="vo" recommend_status="1" limit="100" child="true">
+				<li class="gameinfo">
+				  <div class="time"><a href="{:U('open_game',array('uid'=>get_uid(),'game_id'=>$vo['id'],'pid'=>I('pid'),'promote_id'=>get_user_pid(get_uid())))}"  class="play-btn">打开</a></div>
+				  <a href="{:U('Game/detail?id='.$vo['id'])}">
+					  <div class="num"></div>
+					  <img class="avatar" src="{$vo.icon|get_cover='path'}">
+					  <div class="score">
+						<div class="nickname">{$vo.game_name}</div>
+						<div class="scorename">
+							<div class="star">			
+								<div class="star_num" style="width: {$vo.recommend_level}%;"></div>		
+							</div>
+							<!-- <span class="player">({$vo.dow_num})</span> -->
+							<div>{:msubstr($vo['features'],0,35)}</div>
+						</div>
+					  </div>
+				  </a>
+				</li>
+				</game:recommend>
+			</if>
+			<if condition="($rs eq 2)">
+				<game:recommend name="vo" recommend_status="2" limit="100" child="true">
+				<li class="gameinfo">
+				  <div class="time"><a href="{:U('open_game',array('uid'=>get_uid(),'game_id'=>$vo['id'],'pid'=>I('pid'),'promote_id'=>get_user_pid(get_uid())))}"  class="play-btn">打开</a></div>
+				  <a href="{:U('Game/detail?id='.$vo['id'])}">
+					  <div class="num"></div>
+					  <img class="avatar" src="{$vo.icon|get_cover='path'}">
+					  <div class="score">
+						<div class="nickname">{$vo.game_name}</div>
+						<div class="scorename">
+							<div class="star">			
+								<div class="star_num" style="width: {$vo.recommend_level}%;"></div>		
+							</div>
+							<!-- <span class="player">({$vo.dow_num})</span> -->
+							<div>{$vo.features}</div>
+						</div>
+					  </div>
+				  </a>
+				</li>
+				</game:recommend>
+			</if>	
+				<if condition="($rs eq 3) OR ($rs eq null)">
+				<game:recommend name="vo" recommend_status="3" limit="100" order=" sort desc" child="true">
+				<li class="gameinfo">
+				  <div class="time"><a href="{:U('open_game',array('uid'=>get_uid(),'game_id'=>$vo['id'],'pid'=>I('pid'),'promote_id'=>get_user_pid(get_uid())))}"  class="play-btn">打开</a></div>
+				  <a href="{:U('Game/detail?id='.$vo['id'])}">
+					  <div class="num"></div>
+					  <img class="avatar" src="{$vo.icon|get_cover='path'}">
+					  <div class="score">
+						<div class="nickname">{$vo.game_name}</div>
+						<div class="scorename">
+							<div class="star">			
+								<div class="star_num" style="width: {:$vo['recommend_level'] * 10}%;"></div>		
+							</div>
+							<!-- <span class="player">({$vo.dow_num})</span> -->
+							<div>{:msubstr($vo['features'],0,35)}</div>
+						</div>
+					  </div>
+				  </a>
+				</li>
+				</game:recommend>
+			</if>	
+		</ul>
+		<div class="loading"> <img src="__IMG__/loading.gif"> 正在努力加载 .. </div>
+		<script>
+			loadd();
+			function loadd(){
+				var loading ='<img src="__IMG__/loading.gif">正在加载中';
+				var nodata = '已加载完成全部数据';
+				var total='{$total}';
+				var page = '{$page}';
+				$(window).bind("scroll", function(){
+					var more=$(".loading");
+					var $this =$(this),
+						viewH =$(document.body).height(),//可见高度
+						contentH =$(window).height(),//内容高度
+						scrollTop =$(this).scrollTop(),//滚动高度
+						newht = viewH - contentH - scrollTop;
+					if (page > total){
+						more.unbind().html(nodata).css({'background':'#fff'});
+						return;
+					}
+					if(newht <= 0){
+						$(".loading").show();
+						$.ajax({
+							type: 'POST',
+						  async: true,
+					  dataType : 'json',
+							url: '__CONTROLLER__/game',
+						   data: 'p='+page,
+					 beforeSend: function(){
+									more.html(loading);
+								},
+						success: function (data) {
+								switch (parseInt(data.status)) {
+									case 1:
+									page = data.page;
+									var d = data.data;
+									var val = '';
+									for(var i=0;i<d.length;i++) {
+										val += '<li class="gameinfo">';
+										val += '<div class="time"><a href="" class="play-btn">打开</a></div>';
+										val += '<a href="__MODULE__/Game/detail/id/'+d[i].id+'" >';
+										val += '<div class="num"></div>';
+										val += '<img class="avatar" src="'+d[i].picurl+'">';
+										val += '<div class="score">';
+										val += '<div class="nickname">'+d[i].game_name+'</div>';
+										val += '<div class="scorename">';
+										val += '	<div class="star">			';
+										val += '		<div class="star_num" style="width: '+d[i].recommend_level+'%;"></div>	';	
+										val += '	</div>';
+										/*val += '	<span class="player">('+d[i].dow_num+')</span>';*/
+										val += '	<div>'+d[i].introduction+'</div>';
+										val += '</div>';
+										val += '</div>';
+										val += '</a>';
+										val += '</li>';															
+									}
+									$('.list').append(val);
+									more.unbind().html('加载更多数据');
+									break;
+								default:
+									more.unbind().html('加载更多数据').hide();
+									break;	
+								}
+								return false;
+							},
+						error: function () {
+								more.unbind().html('加载更多数据').hide();
+							},
+						cache: false
+							
+						});
+					}
+				});
+			}
+		</script>
+	</div>
+</block>

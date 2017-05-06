@@ -1,0 +1,10 @@
+.newscontent{width:100%;height:100%;background:#fff;}
+.newsinfo{line-height:50px;text-align:center;border-bottom:1px solid #eee;}
+.nc{width:96%;padding:0 2%;}
+.newspage{padding:10px 0;border-top:1px solid #eee;}
+.newspage div{line-height:30px;}
+.newspage a{color:#333;}
+.fix_nav{position:fixed;height:35px;top:0%;}
+.cf{*zoom:1}
+.cf:after{content:'';display:block;height:0;clear:both;background:#fff;}
+.nc div,.nc p,.nc img{width:100%;}

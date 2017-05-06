@@ -1,0 +1,75 @@
+<extend name="Public/sbases" />
+<block name="body">
+<link href="__CSS__/my.css" rel="stylesheet" />
+<div class="personal">
+	<div class="phead">
+		<span class="ph1">
+        <empty name="headpic">
+        	<img src="__IMG__/default.jpg" />
+        <else />
+        	<img src="{$headpic}" />
+        </empty>
+        </span>
+		<span class="ph2">
+			<div><span>{$user.nickname}</span><i></i></div>
+			<div><span>财富：{$user_flatcoin}  H币</span><i></i></div>
+			<if condition="find_uc_account($user['nickname']) eq false">
+			<div><span>绑定平台币：<a href="#" style="color: green">Uc用户暂不支持</a></span><i></i></div>
+			<else/>
+			<div><span>绑定平台币：<a href="{:U('Subscriber/bdptb')}" style="color: green">点击查看</a></span><i></i></div>
+			</if>
+			
+		</span>
+		<span class="ph3" ><span onclick="logout();">注销</span></span>
+	</div>
+	<div class="pmain">
+        <notempty name="user.phone">
+        <div class="pm pwd"><a href="{:U('Subscriber/pwd')}" >
+			<i></i>
+			<img src="__IMG__/icon_pwd.png" />
+			<span>修改密码</span></a>
+		</div>
+        </notempty>
+		<div class="pm pay">
+		<a href="<if condition='find_uc_account(session("user_auth.account")) eq false'>{:U('index')}<else/>{:U('Subscriber/pay')}</if>" >
+			<i></i>
+			<img src="__IMG__/icon_pay.png" />
+			<span>充值中心</span>
+		</a>
+		</div>
+		<div class="pm trace">
+		<if condition="find_uc_account($user['nickname']) eq false">
+		<a href="#" >
+			<i></i>
+			<img src="__IMG__/icon_trace.png" />
+			<span>我的足迹</span>
+		</a>
+		<else/>
+		<a href="{:U('Subscriber/trace')}" >
+			<i></i>
+			<img src="__IMG__/icon_trace.png" />
+			<span>我的足迹</span>
+		</a>
+		</if>
+		
+		</div>
+		<div class="pm feedback"><a href="{:U('Subscriber/feedback')}" >
+			<i></i>
+			<img src="__IMG__/icon_feedback.png" />
+			<span>意见反馈</span></a>
+		</div>
+		<div class="pm about"><a href="{:U('Subscriber/about')}" >
+			<i></i>
+			<img src="__IMG__/icon_about.png" />
+			<span>关于我们</span></a>
+		</div>
+	</div>
+	<script>
+		function logout() {
+			$.getJSON('__CONTROLLER__/logout',function(data) {
+				window.location=data.url;
+			});
+		}
+	</script>
+</div>
+</block>

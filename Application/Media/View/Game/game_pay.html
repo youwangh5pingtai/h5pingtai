@@ -1,0 +1,201 @@
+<extend name="Public/bases" />
+<block name="body" >
+    <link href="__CSS__/gamepay.css" rel="stylesheet" />
+    <div class="gamepay">
+        <div class="shead">
+            充值
+        </div>
+        <div class="smain">
+            <form id="form1" action="__SELF__" method="post">
+                <div class="payinfo">
+                    <div class="pi1">
+                        <span class="pi11 "><img src="{$data['icon']}" /><div>{$data["game_name"]}</div></span>
+                        <span class="pi12 "><div class="pi122"></div></span>
+                        <span class="pi13 ">{$data['amount'] / 100}元</span>
+                    </div>
+                    <div class="pi2 pii">
+                        <span class="pi21">产品名</span>
+                        <span class="pi22 pii2">{$data['props_name']}</span>
+                        <input type="hidden" id="body" name="name" value="{$data['props_name']}" />
+                    </div>
+                    <div class="pi2 pii">
+                        <span class="pi21">价格</span>
+                        <span class="pi22 pii2">{$data['amount'] / 100}元</span>
+                        <input type="hidden" name="price" value="{$data['amount']}" />
+                    </div>
+                    <div class="pi2 pii">
+                        <span class="pi21">数量</span>
+                        <span class="pi22 pii2">1</span>
+                        <input type="hidden" name="num" value="1" />
+                    </div>
+                </div>
+                <div class="payway">
+                    <div class="title">支付方式</div>
+                    <ul class="wx pw" data-way="wx">
+                        <li class="pw1"><img src="__IMG__/wx.png" /></li>
+                        <li class="pw2"><span class="pwt">微信</span><span class="pwc">推荐微信用户使用</span></li>
+                        <li class="pw3"><div class="">&radic;</div></li>
+                    </ul>
+                    <ul class="pt pw last" data-way="alipay">
+                        <li class="pw1"><img src="__IMG__/zf.png" /></li>
+                        <li class="pw2">
+                            <span class="pwt">支付宝</span>
+                            <span class="pwc">推荐支付宝用户使用</span></li>
+                        <li class="pw3"><div class="">&radic;</div></li>
+                    </ul>
+                    <ul class="pt pw last" data-way="ptb">
+                        <li class="pw1"><img src="__IMG__/ptb.png" /></li>
+                        <li class="pw2">
+                            <span class="pwt">平台币</span><span class="pwc">平台币余额：{$ptb.balance}</span></li>
+                        <li class="pw3"><div class="">&radic;</div></li>
+                    </ul>
+                    <ul class="pt pw last" data-way="bind_ptb">
+                        <li class="pw1"><img src="__IMG__/ptb.png" /></li>
+                        <li class="pw2">
+                            <span class="pwt">绑定平台币</span><span class="pwc">绑定平台币余额：{$bind_ptb.bind_balance}</span></li>
+                        <li class="pw3"><div class="">&radic;</div></li>
+                    </ul>
+                    <input type="hidden" name="payway" id="payway" value="" />
+                </div>
+                <div class="paysubmit">
+                    <input type="button" id="sub" class="submit" value="确认充值">
+                </div>
+                <input type="hidden" name="user_id"    id="user_id"    value="{$data['user_id']}" />
+                <input type="hidden" name="game_appid" id="game_appid" value="{$data['game_appid']}" />
+                <input type="hidden" name="props_name" id="props_name" value="{$data['props_name']}" />
+                <input type="hidden" name="amount"     id="amount"     value="{$data['amount']}" />
+                <input type="hidden" name="trade_no"   id="trade_no"   value="{$data['trade_no']}" />
+            </form>    
+        </div>
+    </div>
+    <script src="__STATIC__/layer/layer.js"></script>
+    <script>
+        $('#payway').val($('.payway ul:first').addClass('curr').data('way'));
+        $('.payway ul').on('click',function() {
+            $(this).addClass('curr').siblings('ul').removeClass('curr');
+            $('#payway').val($(this).attr("data-way"));
+        });
+        // 表单提交
+        $('#sub').on('click',function() {
+            switch($('#payway').val()){
+                case 'wx':
+                    if(isWeiXin()){
+                        $("#form1").submit();
+                    }else if(IsPC()){
+                        wx_pay();
+                        return false;
+                    }else{
+                        wx_wap_pay();
+                    }
+                break;
+                default:
+                    //alert("???");
+                    $("#form1").submit();
+                break;
+            }
+        });
+
+        function wx_pay(){
+            $.ajax({
+                type:"POST",
+                url:"{:U('wx_pay')}",
+                data:{game_appid:$('#game_appid').val(),trade_no:$('#trade_no').val(),props_name:$('#props_name').val(),amount:$('#amount').val(),user_id:$('#user_id').val()},
+                dataType:"json",
+                success:function(data){
+                    layer.open({
+                        id:'iframe', 
+                        type:1,
+                        title:'订单确认',
+                        btn:['充值完成','返回'],
+                        skin:'lay_pop',
+                        style: ' background-color:#78BA32; color:#fff;',
+                        content:data.html,
+                        yes:function(index,layero) {
+                            var lay = $(layero.selector); 
+                        },
+                        cancel:function(index) {
+                            
+                        }
+                    });
+                    checkstatus(data.out_trade_no);
+                },
+                error:function(res){
+                    alert("服务器故障");
+                }
+            })
+        }
+        function checkstatus(data){
+            $.ajax({
+                type:"POST",
+                url:"{:U('checkstatus')}",
+                data:{out_trade_no:data},
+                dataType:"json",
+                success:function(data1){
+                    if(data1.status==1){
+                        window.location.href="http://"+"{$_SERVER['HTTP_HOST']}"+data1.url;
+                    }else{
+                        checkstatus(data);
+                    }
+                },
+                error:function(res){
+                    alert("服务器故障");
+                }
+            })
+        }
+        function wx_wap_pay(){
+        $.ajax({
+            type:"POST",
+            url:"{:U('wx_wap_pay')}",
+            data:{game_appid:$('#game_appid').val(),trade_no:$('#trade_no').val(),props_name:$('#props_name').val(),amount:$('#amount').val(),user_id:$('#user_id').val()},
+            dataType:"json",
+            success:function(data){
+                if(data.status==1){
+                    window.location=data.pay_info; 
+                }else{
+                    layer.open({
+                    id:'iframe', 
+                    type:1,
+                    title:'订单确认',
+                    btn:['充值完成','返回'],
+                    skin:'lay_pop',
+                    style: ' background-color:#78BA32; color:#fff;',
+                    content:data.html,
+                    yes:function(index,layero) {
+                        var lay = $(layero.selector); 
+                        window.location.reload();
+                    },
+                    cancel:function(index) {
+                        
+                    }
+                })
+                }
+            },
+            error:function(res){
+                alert("服务器故障");
+            }
+        })
+    }
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                        "SymbianOS", "Windows Phone",
+                        "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+        function isWeiXin(){
+            var ua = window.navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+</block>

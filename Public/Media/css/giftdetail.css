@@ -1,0 +1,27 @@
+.package_name{display:block;overflow:hidden;width:195px;height:14px;color:#000;font-size:9pt}
+.gameicon{width:45px;height:45px;border-radius:7px}
+.d-play{display:inline-block;margin:5px 15px 5px 5px;margin-right:3px;width:60px;border-radius:3px;background-color:#fca218;color:#fff;vertical-align:middle;text-align:center;font-size:14px;line-height:26px;cursor:pointer}
+.content{position:relative;width:380px}
+.box{float:left;margin-left:5px;width:90pt;height:200px}
+.tab{margin:10px 0;padding:0 10px}
+.ui-btns>.ui-btn{display:block;margin-right:-1px;border-radius:0;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}
+.ui-btns{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%}
+.ui-btn{position:relative;overflow:hidden;box-sizing:border-box;padding:0 9pt;height:30px;min-width:44px;border:1px solid #c2c3cb;background:0 0;background-clip:padding-box;color:#90929a;vertical-align:top;text-align:center;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;font-size:9pt;line-height:30px;-webkit-user-select:none;-ms-user-select:none;user-select:none;-webkit-background-clip:padding-box}
+.ui-btns>.ui-btn:first-child{border-radius:3px 0 0 3px}
+.ui-btns>.ui-btn:last-child{border-radius:0 3px 3px 0}
+.container.game .tab .ui-btn{height:1.875rem;font-size:9pt;line-height:1.875rem}
+.ui-btn[data-ui~=active][data-ui~=active]{border-color:#adaeb9;background:#adaeb9;background-clip:padding-box;color:#fff;-webkit-background-clip:padding-box}
+.progress-bar{width:90pt;height:3px;border:1px solid #eaeded;border-radius:5px}
+.g-progress{display:inline-block}
+.progress-bar .progress-active{margin-top:-1px;margin-left:-1px;height:5px;border-radius:5px;background-color:#fca218}
+.g-rest{display:inline-block;margin-left:10px;color:#fca218;vertical-align:sub;font-size:9pt}
+.play-btn{border:1px solid #fca218;border-radius:2px;color:#fca218}
+.play-btn,.tao-btn{display:inline-block;margin-left:3px;padding:5px;vertical-align:middle;text-align:center;font-size:10px}
+.tao-btn{border:1px solid #a7a7a7;border-radius:2px;color:#a7a7a7}
+.noopen-btn{display:inline-block;margin-left:3px;padding:5px;width:40px;border:0 solid #a7a7a7;border-radius:2px;color:#a7a7a7;vertical-align:middle;text-align:center;font-size:10px}
+.r-game{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;margin-top:10px;padding:3px;border:1px solid #e6e6e6;border-radius:4px}
+.kwd,.r-game{background-color:#fff}
+.kwd{display:inline-block;margin:2em;padding:.75em 1em;border:1px dashed #e60012;color:#272727;font-size:1.1875em;-webkit-user-select:element}
+.kwd span{display:block;border:1px solid #fff}
+
+.fix_nav{position: fixed; top: 0%;}

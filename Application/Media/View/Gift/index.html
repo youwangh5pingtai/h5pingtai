@@ -1,0 +1,258 @@
+<extend name="Public/bases" />
+<block name="body" >
+
+	<link href="__CSS__/gift.css" rel="stylesheet" />
+	<div id="fix_nav" class="fix_nav"> 
+		<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr height="3" id="nav_line" class="nav_line">
+				<td></td>
+				<td></td>
+				<td class="active"></td>
+				<td></td>
+			</tr>
+			<tr class="fn2">
+				<td onclick="window.location=&#39;{:U('Index/index')}&#39;">
+					<span id="menu_1_label">推荐</span></td>
+				<td onclick="window.location=&#39;{:U('Game/index')}&#39;">
+					<span id="menu_1_label">新游</span></td>
+				<td onclick="window.location=&#39;{:U('Gift/index')}&#39;">
+					<span id="menu_1_label" class="active">礼包</span></td>
+				<td onclick="window.location=&#39;{:U('Search/index')}&#39;">
+					<span id="menu_1_label">分类</span></td>
+			</tr>
+		</table>
+	</div>
+	<div id="nav_end" style="height:50px;"></div>
+
+      <advert:advlists name="vo" pos_name="'gift_top_media'" sort="" limit="1">
+        <img src="{$vo.data|get_cover='path'}" alt="暂无广告图片" width="100%" border="0" onclick="window.location=&#39;{$vo.url}&#39;">
+     </advert:advlists>
+	<ul class="headlist">
+		<li class="headli <if condition='I("type") eq  0'>on</if>" onclick="window.location=&#39;{:U('Gift/index?type=0')}&#39;">礼包</li>
+		<li class="headli <if condition='I("type") eq  1'>on</if>" onclick="window.location=&#39;{:U('Gift/index?type=1')}&#39;">开服表</li>
+	</ul>
+	<if condition="I('type') eq 0">
+	<div id="packList">
+		<div class="pl">
+		<volist name="data" id="vo">
+			<div>
+				<table border="0" cellspacing="0" cellpadding="0" width="95%" align="center">
+					<tr>
+					  <td bgcolor="#ffffff" height="5"></td>
+					</tr>
+				</table>
+				<table border="0" cellspacing="2" cellpadding="2" width="98%" align="center">
+					<tr>
+					  <td width="10%" onclick="giftjump({$vo['id']})">
+						<img src="{$vo.icon|get_cover='path'}" class="gameicon"></td>
+					  <td width="75%" onclick="giftjump({$vo['id']})">
+					  <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center">
+							<tr>
+							  <td><span class="package_name">{$vo.game_name} - {$vo.giftbag_name}</span></td>
+							</tr>
+							<tr>
+							  <td><div class="desc">{$vo.desribe}</div></td>
+							</tr>
+							<tr>
+								<td height="20">	 
+								<span class="g-rest">剩余<?php if($vo['novice']==""){echo 0;}else{ echo count(explode(",",$vo['novice']));}?>个</span>
+								</td>
+							</tr>
+						</table></td>
+					  <td width="15%"><a class="play-btn" onclick="giftjump({$vo['id']})">领号</a></td>
+					</tr>
+				</table>
+				<table border="0" cellspacing="0" cellpadding="0" width="95%" align="center">
+					<tr>
+					  <td bgcolor="#ffffff" height="5"></td>
+					</tr>
+					<tr>
+					  <td bgcolor="#eeeeee" height="1"></td>
+					</tr>
+				</table>
+			</div>
+		</volist>
+		</div>
+	</div>
+	<else />
+	<div id="serverList" class="server">
+	<div class="sl">
+
+		<div class="title"> 今日最新服</div>
+		<div class="servermain">
+			<ul id="newserverlist">
+			<foreach name="datas['today']" item="vo">
+			  <li data-gameid="wyft"><img class="gameicon" src="{$vo.icon|get_cover='path'}">
+				<div class="gameinfo">
+				  <div class="gamename">{$vo.game_name}</div>
+				  <div class="gamedesc">{$vo.game_type_name}</div>
+				</div>
+				<div class="serverdetail">
+				  <div class="gameserver">{$vo.server_name}</div>
+ 				  <div>{$vo.strat_time}</div>
+				  <!--<div>{$vo.desride}</div> -->
+				  <!-- <img src="__IMG__/game/pack1.png" class="packbtn" data-packid="89">
+				  <img src="__IMG__/game/pack2.png" class="packbtn" data-packid="46"> -->
+				 </div>
+				<div class="gamebtn">
+				  <div class="gamestart" onclick="window.location=&#39;{:U('Game/detail?id='.$vo['game_id'])}&#39;">开  始</div>
+				</div>
+			  </li>		
+			</foreach>
+			</ul>
+	  	</div>
+
+	  <div class="title"> 开服表(未来一周)</div>
+	  <div class="servermain">
+		<ul id="nextserverlist">
+		<volist name="datas['week']" id="vo">
+			<li>
+				<img class="gameicon" src="{$vo.icon|get_cover='path'}">	
+				<div class="gameinfo">	
+					<div class="gamename">{$vo.game_name}</div>	
+					<div class="gamedesc">{$vo.game_type_name}</div>	
+				</div>
+				<div class="servinfo">	
+					<div class="servername">{$vo.server_name}</div>
+					<div class="servtime">{$vo.strat_time}</div>
+					<div></div>
+				</div>	
+			</li>	
+		</volist>
+		</ul>
+	  </div>
+	  </div>
+	</div>
+	</if>
+	<div class="loading"> <img src="__IMG__/loading.gif"> 正在努力加载 .. </div>
+	<script>		
+		loadd();
+        function giftjump(id) {
+            $.ajax({
+                type:'post',
+                data:'id='+id,
+                dataType:'json',
+                url:'{:U("Subscriber/isLogin")}',
+                success:function(data){
+                    if (parseInt(data.status) == 1) {
+                        window.location.href='__CONTROLLER__/detail/id/'+id;
+                    } else {                    
+                        alert('请先登录');
+                    }
+                },
+                error:function() {
+                    alert('服务器故障，请稍候再试。。。');
+                }
+            });
+        }
+        
+		function loadd(){
+			var loading ='<img src="__IMG__/loading.gif">正在加载中';
+			var nodata = '已加载完成全部数据';
+			var total='{$total}';
+			var page = '{$page}';
+			$(window).bind("scroll", function(){				
+				var more=$(".loading");
+				var $this =$(this),
+					viewH =$(document.body).height(),//可见高度
+					contentH =$(window).height(),//内容高度
+					scrollTop =$(this).scrollTop(),//滚动高度
+					newht = viewH - contentH - scrollTop;
+				if (page > total){
+					more.unbind().html(nodata).css({'background':'#fff'});
+					return;
+				}
+				if(newht <= 0){
+					$(".loading").show();
+					
+					$.ajax({
+						type: 'POST',
+					  async: true,
+				  dataType : 'json',
+						url: '__CONTROLLER__/getdata',
+					   data: 'p='+page+'&type={$type}',
+				 beforeSend: function(){
+								more.html(loading);
+							},
+					success: function (data) {
+							console.log(data);
+							switch (parseInt(data.status)) {
+								case 1:
+								page = data.page;
+								var d = data.data;
+								var val = '';
+								if (parseInt('{$type}') === 1) {
+									for(var i=0;i<d.length;i++) {
+										val += '<li><img class="gameicon" src="'+d[i].picurl+'">';	
+										val += '	<div class="gameinfo">';	
+										val += '	  <div class="gamename">'+d[i].game_name+'</div>';	
+										val += '	  <div class="gamedesc">'+d[i].game_type_name+'</div>';	
+										val += '	</div>';	
+										val += '	<div class="servinfo">';	
+										val += '	  <div class="servername">'+d[i].area_name+'</div>';	
+										val += '	  <div class="servtime">'+d[i].start_time+'</div>';	
+										val += '	  <div></div>';	
+										val += '	</div>';	
+										val += '  </li>	';				
+									}
+									$('#nextserverlist').append(val);
+								} else {
+									for(var i=0;i<d.length;i++) {
+										val += '<div>';
+										val += '<table border="0" cellspacing="0" cellpadding="0" width="95%" align="center">';	
+										val += '	<tr>';	
+										val += '	  <td bgcolor="#ffffff" height="5"></td>';	
+										val += '	</tr>';	
+										val += '</table>';	
+										val += '<table border="0" cellspacing="2" cellpadding="2" width="98%" align="center">';	
+										val += '	<tr>';	
+										val += '	  <td width="10%" onclick="giftjump('+d[i].id+')">';	
+										val += '		<img src="'+d[i].picurl+'" class="gameicon"></td>';	
+										val += '	  <td width="75%" onclick="giftjump('+d[i].id+')">';	
+										val += '	  <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center">';	
+										val += '			<tr>';	
+										val += '			  <td><span class="package_name">'+d[i].giftbag_name+'</span></td>';	
+										val += '			</tr>';	
+										val += '			<tr>';	
+										val += '			  <td><div class="desc">'+d[i].desribe+'</div></td>';	
+										val += '			</tr>';	
+										val += '			<tr>';	
+										val += '				<td height="20">';
+										val += '					<span class="g-rest">剩余'+d[i].novicenum+'个</span>';
+										val += '				</td>';	
+										val += '			</tr>';	
+										val += '		</table></td>';	
+										val += '	  <td width="15%"><a class="play-btn" onclick="giftjump('+d[i].id+')">领号</a></td>';	
+										val += '	</tr>';	
+										val += '</table>';	
+										val += '<table border="0" cellspacing="0" cellpadding="0" width="95%" align="center">';	
+										val += '	<tr>';	
+										val += '	  <td bgcolor="#ffffff" height="5"></td>';	
+										val += '	</tr>';	
+										val += '	<tr>';	
+										val += '	  <td bgcolor="#eeeeee" height="1"></td>';	
+										val += '	</tr>';	
+										val += '</table>';	
+										val += '</div>';	
+									}
+									$('#packList .pl').append(val);
+								}
+								more.unbind().html('加载更多数据');
+								break;
+							default:
+								more.unbind().html('加载更多数据').hide();
+								break;	
+							}
+							return false;
+						},
+					error: function () {
+							more.unbind().html('加载更多数据').hide();
+						},
+					cache: false
+						
+					});
+				}
+			});
+		}
+	</script>
+</block>
